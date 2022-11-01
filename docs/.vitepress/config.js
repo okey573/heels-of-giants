@@ -107,14 +107,6 @@ function sidebar () {
       collapsible: true,
       items: [
       ]
-    },
-    {
-      text: 'test',
-      collapsible: true,
-      items: [
-        { text: 'Test', link: '/Test/' },
-        { text: 'Guide', link: '/Test/guide' }
-      ]
     }
   ]
 }
