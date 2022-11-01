@@ -1,0 +1,43 @@
+---
+title: 'instanceof'
+titleTemplate: instanceof的理解的实现
+description: instanceof的理解的实现
+lastUpdated: true
+layout: doc
+aside: true
+outline: 2
+---
+
+## 理解
+
+判断一个function的prototype是否存在于某一个对象的原型链上
+
+- [原型链](/JavaScript/原型链#图解)
+
+## 实现
+
+```js
+const theInstanceof = function (object, constructor) {
+  if (typeof object !== 'object' || typeof constructor !== 'function') {
+    return false
+  }
+  let proto = Object.getPrototypeOf(object)
+  while (proto) {
+    const prototype = constructor.prototype
+    if (proto === prototype) return true
+    proto = Object.getPrototypeOf(proto)
+  }
+  return false
+}
+
+/********************* 验证 *********************/
+function Foo () {
+}
+
+const foo1 = new Foo()
+const anyObj = {}
+
+console.log(foo1 instanceof Foo === theInstanceof(foo1, Foo))
+console.log(anyObj instanceof Foo === theInstanceof(anyObj, Foo))
+console.log(foo1 instanceof Object === theInstanceof(foo1, Object))
+```

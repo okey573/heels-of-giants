@@ -35,6 +35,7 @@ function sidebar () {
       collapsible: true,
       items: [
         { text: '原型链', link: '/JavaScript/原型链' },
+        { text: 'instanceof', link: '/JavaScript/instanceof' },
       ]
     },
     {
