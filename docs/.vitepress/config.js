@@ -36,6 +36,7 @@ function sidebar () {
       items: [
         { text: '原型链', link: '/JavaScript/原型链' },
         { text: 'instanceof', link: '/JavaScript/instanceof' },
+        { text: '执行上下文和执行栈', link: '/JavaScript/执行上下文和执行栈' },
       ]
     },
     {
