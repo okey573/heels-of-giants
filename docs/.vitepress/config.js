@@ -40,6 +40,9 @@ function sidebar () {
         { text: 'call apply bind', link: '/JavaScript/call-apply-bind' },
         { text: 'new', link: '/JavaScript/new' },
         { text: '事件机制', link: '/JavaScript/事件机制' },
+        { text: 'PWA和Service Worker', link: '/JavaScript/PWA-ServiceWorker' },
+        { text: 'WebWorker', link: '/JavaScript/WebWorker' },
+        { text: 'ES6', link: '/JavaScript/ES6' },
       ]
     },
     {
