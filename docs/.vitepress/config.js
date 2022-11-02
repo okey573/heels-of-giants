@@ -44,7 +44,6 @@ function sidebar () {
         { text: 'PWA和Service Worker', link: '/JavaScript/PWA-ServiceWorker' },
         { text: 'WebWorker', link: '/JavaScript/WebWorker' },
         { text: 'Promise', link: '/JavaScript/Promise' },
-        { text: '深浅拷贝', link: '/JavaScript/深浅拷贝' },
         { text: 'ES6', link: '/JavaScript/ES6' },
       ]
     },
