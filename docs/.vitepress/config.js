@@ -3,7 +3,7 @@ module.exports = {
   description: '一个前端的复兴之路',
   base: '/',
   head: [
-    ['link', { rel: 'icon', href: '/public/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   ignoreDeadLinks: true,
   lastUpdated: true,
