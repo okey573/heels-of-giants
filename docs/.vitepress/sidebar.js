@@ -32,7 +32,10 @@ function sidebar () {
     {
       text: '前端工程化',
       collapsible: true,
-      items: []
+      items: [
+        { text: 'npm yarn pnpm 发展历程', link: '/Engineered/npm-yarn-pnpm' },
+        { text: 'node_modules', link: '/Engineered/node_modules' },
+      ]
     },
     {
       text: '性能优化',
@@ -72,10 +75,7 @@ function sidebar () {
     {
       text: '其他',
       collapsible: true,
-      items: [
-        { text: 'npm yarn pnpm 发展历程', link: '/Others/npm-yarn-pnpm' },
-        { text: 'node_modules', link: '/Others/node_modules' },
-      ]
+      items: []
     }
   ]
 }
