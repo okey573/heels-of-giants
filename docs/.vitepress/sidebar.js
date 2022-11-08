@@ -74,6 +74,7 @@ function sidebar () {
       collapsible: true,
       items: [
         { text: 'npm yarn pnpm 发展历程', link: '/Others/npm-yarn-pnpm' },
+        { text: 'node_modules', link: '/Others/node_modules' },
       ]
     }
   ]
