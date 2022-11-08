@@ -22,6 +22,7 @@ function sidebar () {
       collapsible: true,
       items: [
         { text: '回流和重绘', link: '/CSS/回流和重绘' },
+        { text: 'canvas画一个爱心', link: '/CSS/爱心' },
       ]
     },
     {
