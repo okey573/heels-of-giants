@@ -36,6 +36,7 @@ function sidebar () {
       items: [
         { text: 'npm yarn pnpm 发展历程', link: '/Engineered/npm-yarn-pnpm' },
         { text: 'node_modules', link: '/Engineered/node_modules' },
+        { text: 'monorepo和workspace', link: '/Engineered/monorepo-workspace' },
       ]
     },
     {
