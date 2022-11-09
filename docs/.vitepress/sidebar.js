@@ -11,6 +11,7 @@ function sidebar () {
         { text: 'call apply bind', link: '/JavaScript/call-apply-bind' },
         { text: 'new', link: '/JavaScript/new' },
         { text: '事件机制', link: '/JavaScript/事件机制' },
+        { text: 'cookie session localStorage', link: '/JavaScript/cookie-session-localStorage' },
         { text: 'PWA和Service Worker', link: '/JavaScript/PWA-ServiceWorker' },
         { text: 'WebWorker', link: '/JavaScript/WebWorker' },
         { text: 'Promise', link: '/JavaScript/Promise' },
@@ -32,9 +33,21 @@ function sidebar () {
       ]
     },
     {
-      text: 'VUE',
+      text: 'Vue',
       collapsible: true,
-      items: []
+      items: [
+        { text: 'mvvm', link: '/Vue/mvvm' },
+        { text: '生命周期', link: '/Vue/生命周期' },
+        { text: 'computed和watch', link: '/Vue/computed-watch' },
+        { text: '响应式原理', link: '/Vue/响应式原理' },
+        { text: 'nextTick', link: '/Vue/nextTick' },
+        { text: '组件通信', link: '/Vue/组件通信' },
+        { text: 'virtualDom', link: '/Vue/virtualDom' },
+        { text: 'diff', link: '/Vue/diff' },
+        { text: 'keep-alive', link: '/Vue/keep-alive' },
+        { text: 'vuex和pinia', link: '/Vue/vuex-pinia' },
+        { text: 'Vue Router', link: '/Vue/vue-router' },
+      ]
     },
     {
       text: '前端工程化',
