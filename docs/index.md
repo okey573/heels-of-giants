@@ -1,10 +1,10 @@
 ---
 layout: home
+titleTemplate: 巨人之踵
 
 hero:
-  name: Road to Revive
-  text: 一个前端的复兴之路
-  tagline: Let's do better...
+  name: Heels of Giants
+  tagline: Let's climb up...
 
   actions:
     - theme: brand

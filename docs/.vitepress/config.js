@@ -1,8 +1,7 @@
 import sidebar from './sidebar'
 
 module.exports = {
-  title: '复兴之路',
-  description: '一个前端的复兴之路',
+  title: '巨人之踵',
   base: '/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]

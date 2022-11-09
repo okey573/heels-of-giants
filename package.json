@@ -1,5 +1,5 @@
 {
-  "name": "road-to-revive",
+  "name": "heels-of-giants",
   "private": true,
   "scripts": {
     "dev": "vitepress dev docs",
