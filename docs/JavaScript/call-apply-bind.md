@@ -1,11 +1,5 @@
 ---
 title: call apply bind
-titleTemplate: call apply bind的实现
-description: call apply bind的实现
-lastUpdated: true
-layout: doc
-aside: true
-outline: 2
 ---
 
 _本文重点在[实现bind](/JavaScript/call-apply-bind#实现bind)_

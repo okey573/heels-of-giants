@@ -1,11 +1,5 @@
 ---
-title: 'instanceof'
-titleTemplate: instanceof的理解的实现
-description: instanceof的理解的实现
-lastUpdated: true
-layout: doc
-aside: true
-outline: 2
+title: instanceof
 ---
 
 ## 理解

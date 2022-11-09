@@ -1,11 +1,5 @@
 ---
 title: 1px问题
-titleTemplate: 1px问题
-description: 1px问题
-lastUpdated: true
-layout: doc
-aside: true
-outline: 2
 ---
 
 ## 现象及原因

@@ -1,10 +1,5 @@
 ---
 title: npm yarn pnpm 发展历程
-titleTemplate: npm yarn pnpm 发展历程
-description: npm yarn pnpm 发展历程
-lastUpdated: true
-layout: doc
-aside: false
 ---
 
 _从上往下按发布时间排序_

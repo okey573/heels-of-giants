@@ -1,11 +1,5 @@
 ---
-title: grid
-titleTemplate: grid布局
-description: grid布局
-lastUpdated: true
-layout: doc
-aside: true
-outline: 2
+title: grid布局
 ---
 
 _coming soon..._

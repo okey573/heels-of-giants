@@ -1,12 +1,5 @@
 ---
 title: PWA和Service Worker
-titleTemplate: PWA和Service Worker
-description: PWA和Service Worker
-lastUpdated: true
-layout: doc
-aside: true
-outline: 2
-outlineTitle: outlineTitle
 ---
 
 _个人感觉PWA不重要，在国内没什么市场，国内的小程序太多了:ghost:_

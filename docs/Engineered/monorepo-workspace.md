@@ -1,11 +1,5 @@
 ---
 title: monorepo&workspace
-titleTemplate: monorepo&workspace
-description: monorepo和workspace
-lastUpdated: true
-layout: doc
-aside: true
-outline: 2
 ---
 
 # monorepo

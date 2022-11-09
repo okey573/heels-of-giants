@@ -1,11 +1,5 @@
 ---
 title: new
-titleTemplate: new操作符的理解和实现
-description: new操作符的理解和实现
-lastUpdated: true
-layout: doc
-aside: true
-outline: 2
 ---
 
 ## 理解
