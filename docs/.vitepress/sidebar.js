@@ -23,6 +23,8 @@ function sidebar () {
       items: [
         { text: 'flex布局', link: '/CSS/flex' },
         { text: 'grid布局', link: '/CSS/grid' },
+        { text: '居中', link: '/CSS/居中' },
+        { text: '预处理器', link: '/CSS/预处理器' },
         { text: '回流和重绘', link: '/CSS/回流和重绘' },
         { text: '1px问题', link: '/CSS/1px问题' },
         { text: '选择器和优先级', link: '/CSS/选择器和优先级' },
