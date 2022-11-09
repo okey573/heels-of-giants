@@ -1,0 +1,31 @@
+---
+title: 1px问题
+titleTemplate: 1px问题
+description: 1px问题
+lastUpdated: true
+layout: doc
+aside: true
+outline: 2
+---
+
+## 现象及原因
+
+1px问题现象是在高倍屏幕中设置1px的样式，例如1px的边框，看起来会比较粗的问题。
+
+其实这个问题和DPR并没有关系，dpr可以用来解释不同分辨率手机呈现页面的精细度的差异，但并不能解释1px问题。
+
+真正的原因：
+
+我们做移动端页面时一般都会设置meta viewport的content=“width=device-width”，
+这里就是把html视窗宽度大小设置等于设备宽度的大小，大多数手机的屏幕设备宽度都差不多，以iphoneX为例，屏幕宽度375px。
+
+而UI给设计图的时候基本上都是给的二倍图甚至三倍图，假设设计图是750px的二倍图，在750px上设计了1px的边框，要拿到375px宽度的手机来显示，就相当于整体设计图缩小一倍，所以在375px手机上要以0.5px呈现才符合预期效果，然而css里最低只支持1px大小，不足1px就以1px显示，所以你看到的就显得边框较粗，实际上只是设计图整体缩小了，而1px的边框没有跟着缩小导致的。（ps：ios较新版已支持0.5px，安卓不支持，这里暂且忽略）
+
+## 解决方案
+
+- 媒体查询
+- border-image
+- background-image
+- box-shadow
+- transform加伪类
+- viewport+rem实现
