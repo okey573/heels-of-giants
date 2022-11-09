@@ -306,7 +306,7 @@
 
         context.closePath()
 
-        context.fillStyle = '#ea80b0'
+        context.fillStyle = '#00dfd5'
 
         context.fill()
 
