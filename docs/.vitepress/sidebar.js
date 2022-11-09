@@ -21,6 +21,8 @@ function sidebar () {
       text: 'CSS 基础',
       collapsible: true,
       items: [
+        { text: 'flex布局', link: '/CSS/flex' },
+        { text: 'grid布局', link: '/CSS/grid' },
         { text: '回流和重绘', link: '/CSS/回流和重绘' },
         { text: '1px问题', link: '/CSS/1px问题' },
         { text: '选择器和优先级', link: '/CSS/选择器和优先级' },
