@@ -12,17 +12,23 @@ module.exports = {
     logo: '/favicon.ico',
     lastUpdatedText: '最近更新时间',
     nav: nav(),
-    sidebar: sidebar()
+    sidebar: sidebar(),
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/okey573/heels-of-giants' }
+    ],
   }
 }
 
 function nav () {
   return [
-    { text: '百度一下', link: 'https://baidu.com' },
+    { text: 'MDN Web Docs', link: 'https://developer.mozilla.org/zh-CN/' },
     {
       text: '相关链接',
       items: [
         { text: 'vue.js', link: 'https://cn.vuejs.org/' },
+        { text: 'react.js', link: 'https://zh-hans.reactjs.org/' },
+        { text: 'vite', link: 'https://cn.vitejs.dev/' },
+        { text: 'webpack', link: 'https://webpack.docschina.org/' },
         { text: 'vitepress', link: 'https://vitepress.vuejs.org/' }
       ]
     }
