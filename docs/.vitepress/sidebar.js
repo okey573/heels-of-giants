@@ -3,6 +3,7 @@ export default [
     text: 'JavaScript 基础',
     collapsible: true,
     items: [
+      { text: '变量类型', link: '/JavaScript/types' },
       { text: '原型链', link: '/JavaScript/原型链' },
       { text: 'instanceof', link: '/JavaScript/instanceof' },
       { text: '执行上下文和执行栈', link: '/JavaScript/执行上下文和执行栈' },
@@ -38,7 +39,7 @@ export default [
       { text: 'mvvm', link: '/Vue/mvvm' },
       { text: '生命周期', link: '/Vue/lifecycle' },
       { text: 'computed和watch', link: '/Vue/computed-watch' },
-      { text: '响应式原理', link: '/Vue/响应式原理' },
+      { text: '响应式原理', link: '/Vue/reactivity' },
       { text: 'nextTick', link: '/Vue/nextTick' },
       { text: '组件通信', link: '/Vue/组件通信' },
       { text: 'virtualDom', link: '/Vue/virtualDom' },
