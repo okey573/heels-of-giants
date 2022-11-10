@@ -36,7 +36,7 @@ export default [
     collapsible: true,
     items: [
       { text: 'mvvm', link: '/Vue/mvvm' },
-      { text: '生命周期', link: '/Vue/生命周期' },
+      { text: '生命周期', link: '/Vue/lifecycle' },
       { text: 'computed和watch', link: '/Vue/computed-watch' },
       { text: '响应式原理', link: '/Vue/响应式原理' },
       { text: 'nextTick', link: '/Vue/nextTick' },
