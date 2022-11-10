@@ -12,7 +12,7 @@ module.exports = {
     logo: '/favicon.ico',
     lastUpdatedText: '最近更新时间',
     nav: nav(),
-    sidebar: sidebar(),
+    sidebar: sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/okey573/heels-of-giants' }
     ],
