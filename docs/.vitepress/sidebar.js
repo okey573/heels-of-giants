@@ -68,7 +68,9 @@ export default [
   {
     text: 'TypeScript',
     collapsible: true,
-    items: []
+    items: [
+      { text: '类型', link: '/TypeScript/types' },
+    ]
   },
   {
     text: '网络',
