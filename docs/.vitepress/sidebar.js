@@ -57,6 +57,7 @@ function sidebar () {
         { text: 'node_modules', link: '/Engineered/node_modules' },
         { text: 'monorepo和workspace', link: '/Engineered/monorepo-workspace' },
         { text: 'Web Component', link: '/Engineered/web-component' },
+        { text: '模块联邦', link: '/Engineered/module-federation' },
       ]
     },
     {
