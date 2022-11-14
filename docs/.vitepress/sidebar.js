@@ -25,6 +25,9 @@ export default [
       { text: 'flex布局', link: '/CSS/flex' },
       { text: 'grid布局', link: '/CSS/grid' },
       { text: '居中', link: '/CSS/居中' },
+      { text: '清除浮动', link: '/CSS/清除浮动' },
+      { text: '盒模型', link: '/CSS/盒模型' },
+      { text: 'BFC', link: '/CSS/bfc' },
       { text: '预处理器', link: '/CSS/预处理器' },
       { text: '回流和重绘', link: '/CSS/回流和重绘' },
       { text: '1px问题', link: '/CSS/1px问题' },
@@ -53,6 +56,7 @@ export default [
     text: '前端工程化',
     collapsible: true,
     items: [
+      { text: '模块化', link: '/Engineered/modular' },
       { text: 'npm yarn pnpm 发展历程', link: '/Engineered/npm-yarn-pnpm' },
       { text: 'node_modules', link: '/Engineered/node_modules' },
       { text: 'monorepo和workspace', link: '/Engineered/monorepo-workspace' },
@@ -75,7 +79,10 @@ export default [
   {
     text: '网络',
     collapsible: true,
-    items: []
+    items: [
+      { text: 'Ajax', link: '/CSS/Ajax' },
+      { text: 'http状态码', link: '/CSS/HTTP-status-code' },
+    ]
   },
   {
     text: '设计模式',

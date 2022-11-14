@@ -34,3 +34,17 @@ ViewModel 通过双向数据绑定把 View 和 Model 连接了起来，而 View 
 2. 将 View 转化成 Model ，即将所看到的页面转化成后端的数据。实现的方式是：DOM 事件监听
 
 这两个方向都实现的，我们称之为数据的双向绑定
+
+## MVC和MVP
+
+#### MVC
+
+MVC表示模型-视图-控制器 Model-View-Controller
+
+用户操作->View（负责接收用户的输入操作）->Controller（业务逻辑处理）->Model（数据持久化）->View（将结果反馈给View）
+
+#### MVP
+
+MVP表示模型-视图-演示者 Model-View-Presenter
+
+View 与 Model之间不通信，都通过 Presenter 传递。Presenter完全把Model和View进行了分离，主要的程序逻辑在Presenter里实现
