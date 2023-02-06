@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /JavaScript/原型链
+      link: /JavaScript/types
     - theme: alt
       text: View on GitHub
       link: https://github.com
