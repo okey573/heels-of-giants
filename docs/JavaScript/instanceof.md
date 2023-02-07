@@ -15,6 +15,7 @@ const theInstanceof = function (object, constructor) {
   if (typeof object !== 'object' || typeof constructor !== 'function') {
     return false
   }
+  // getPrototypeOf这个api等价于直接访问对象的__proto__属性
   let proto = Object.getPrototypeOf(object)
   while (proto) {
     const prototype = constructor.prototype
