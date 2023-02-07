@@ -80,8 +80,8 @@ export default [
     text: '网络',
     collapsible: true,
     items: [
-      { text: 'Ajax', link: '/CSS/Ajax' },
-      { text: 'http状态码', link: '/CSS/HTTP-status-code' },
+      { text: 'Ajax', link: '/Network/AJAX' },
+      { text: 'http状态码', link: '/Network/http状态码' },
     ]
   },
   {
@@ -107,6 +107,8 @@ export default [
   {
     text: '其他',
     collapsible: true,
-    items: []
+    items: [
+      { text: 'URL到页面显示', link: '/Other/URL到页面显示.md' }
+    ]
   }
 ]
