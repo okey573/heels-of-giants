@@ -37,7 +37,7 @@ Function.prototype.theApply = function () {
 Function.prototype.theBind = function () {
   const fn = this
   const [context, ...outArgs] = arguments
-  const bound = function (inArgs) {
+  const bound = function (...inArgs) {
     const args = outArgs.concat(inArgs)
     if (this instanceof bound) {
       return new fn(...args)
