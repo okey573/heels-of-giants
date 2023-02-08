@@ -2,7 +2,7 @@ import sidebar from './sidebar'
 
 module.exports = {
   title: '巨人之踵',
-  base: '/',
+  base: '/docs',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
