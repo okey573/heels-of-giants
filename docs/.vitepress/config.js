@@ -16,13 +16,13 @@ module.exports = {
     socialLinks: [
       { icon: 'github', link: 'https://github.com/okey573/heels-of-giants' }
     ],
-  },
-  algolia: {
-    appId: 'SQ5GQ6SV73',
-    apiKey: 'cba98dd04dea30f0007609408f2ccc74',
-    indexName: 'heels-of-giants',
-    placeholder: '请输入关键词',
-    buttonText: '搜索'
+    algolia: {
+      appId: 'SQ5GQ6SV73',
+      apiKey: 'cba98dd04dea30f0007609408f2ccc74',
+      indexName: 'heels-of-giants',
+      placeholder: '请输入关键词',
+      buttonText: '搜索'
+    }
   }
 }
 
