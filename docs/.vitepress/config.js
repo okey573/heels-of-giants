@@ -9,7 +9,7 @@ module.exports = {
   ignoreDeadLinks: true,
   lastUpdated: true,
   themeConfig: {
-    logo: '/favicon.ico',
+    logo: './favicon.ico',
     lastUpdatedText: '最近更新时间',
     nav: nav(),
     sidebar: sidebar,
