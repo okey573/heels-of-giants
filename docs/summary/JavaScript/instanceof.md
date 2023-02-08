@@ -6,7 +6,7 @@ title: instanceof
 
 判断一个function的prototype是否存在于某一个对象的原型链上
 
-- [原型链](/summary/JavaScript/原型链#图解)
+- [原型链](/summary/JavaScript/prototype-chain#图解)
 
 ## 实现
 
