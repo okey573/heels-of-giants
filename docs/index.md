@@ -4,21 +4,15 @@ titleTemplate: 巨人之踵
 
 hero:
   name: Heels of Giants
-  tagline: Let's climb up...
-
+  tagline: Let's climb up... 
+  image:
+    src: /it.svg
+    alt: ChoDocs
   actions:
     - theme: brand
       text: Get Started
-      link: /JavaScript/types
+      link: /summary/
     - theme: alt
       text: View on GitHub
       link: https://github.com
-
-features:
-  - icon: ⚡️
-    title: Complete
-    details: ...
-  - icon: 🖖
-    title: Exactly
-    details: ...
 ---

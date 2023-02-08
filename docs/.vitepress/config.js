@@ -21,16 +21,8 @@ module.exports = {
 
 function nav () {
   return [
-    { text: 'MDN Web Docs', link: 'https://developer.mozilla.org/zh-CN/' },
-    {
-      text: '相关链接',
-      items: [
-        { text: 'vue.js', link: 'https://cn.vuejs.org/' },
-        { text: 'react.js', link: 'https://zh-hans.reactjs.org/' },
-        { text: 'vite', link: 'https://cn.vitejs.dev/' },
-        { text: 'webpack', link: 'https://webpack.docschina.org/' },
-        { text: 'vitepress', link: 'https://vitepress.vuejs.org/' }
-      ]
-    }
+    { text: '🔋 日常总结', link: '/summary/' },
+    { text: '🍒 代码片段', link: '/code/' },
+    { text: '📖 面试总结', link: '/interview/' },
   ]
 }

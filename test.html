@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  .wp {
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+  }
+
+  .box {
+    background: green;
+  }
+
+  .box.size {
+    width: 100px;
+    height: 100px;
+  }
+
+  /*****************/
+
+  .wp {
+    line-height: 300px;
+    text-align: center;
+    font-size: 0px;
+  }
+
+  .box {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: initial;
+    text-align: left; /* 修正文字 */
+  }
+
+</style>
+<body>
+<div class="wp">
+    <div class="box">123123</div>
+</div>
+</body>
+</html>

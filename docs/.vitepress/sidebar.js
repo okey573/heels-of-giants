@@ -1,114 +1,118 @@
-export default [
-  {
-    text: 'JavaScript 基础',
-    collapsible: true,
-    items: [
-      { text: '变量类型', link: '/JavaScript/types' },
-      { text: '原型链', link: '/JavaScript/原型链' },
-      { text: 'instanceof', link: '/JavaScript/instanceof' },
-      { text: '执行上下文和执行栈', link: '/JavaScript/执行上下文和执行栈' },
-      { text: '闭包', link: '/JavaScript/闭包' },
-      { text: 'call apply bind', link: '/JavaScript/call-apply-bind' },
-      { text: 'new', link: '/JavaScript/new' },
-      { text: '事件机制', link: '/JavaScript/事件机制' },
-      { text: 'cookie session localStorage', link: '/JavaScript/cookie-session-localStorage' },
-      { text: 'PWA和Service Worker', link: '/JavaScript/PWA-ServiceWorker' },
-      { text: 'WebWorker', link: '/JavaScript/WebWorker' },
-      { text: 'Promise', link: '/JavaScript/Promise' },
-      { text: 'ES6', link: '/JavaScript/ES6' },
-    ]
-  },
-  {
-    text: 'CSS 基础',
-    collapsible: true,
-    items: [
-      { text: 'flex布局', link: '/CSS/flex' },
-      { text: 'grid布局', link: '/CSS/grid' },
-      { text: '居中', link: '/CSS/居中' },
-      { text: '清除浮动', link: '/CSS/清除浮动' },
-      { text: '盒模型', link: '/CSS/盒模型' },
-      { text: 'BFC', link: '/CSS/bfc' },
-      { text: '预处理器', link: '/CSS/预处理器' },
-      { text: '回流和重绘', link: '/CSS/回流和重绘' },
-      { text: '1px问题', link: '/CSS/1px问题' },
-      { text: '选择器和优先级', link: '/CSS/选择器和优先级' },
-      { text: 'canvas画一个爱心', link: '/CSS/爱心' },
-    ]
-  },
-  {
-    text: 'Vue',
-    collapsible: true,
-    items: [
-      { text: 'mvvm', link: '/Vue/mvvm' },
-      { text: '生命周期', link: '/Vue/lifecycle' },
-      { text: 'computed和watch', link: '/Vue/computed-watch' },
-      { text: '响应式原理', link: '/Vue/reactivity' },
-      { text: 'nextTick', link: '/Vue/nextTick' },
-      { text: '组件通信', link: '/Vue/组件通信' },
-      { text: 'virtualDom', link: '/Vue/virtualDom' },
-      { text: 'diff', link: '/Vue/diff' },
-      { text: 'keep-alive', link: '/Vue/keep-alive' },
-      { text: 'vuex和pinia', link: '/Vue/vuex-pinia' },
-      { text: 'Vue Router', link: '/Vue/vue-router' },
-    ]
-  },
-  {
-    text: '前端工程化',
-    collapsible: true,
-    items: [
-      { text: '模块化', link: '/Engineered/modular' },
-      { text: 'npm yarn pnpm 发展历程', link: '/Engineered/npm-yarn-pnpm' },
-      { text: 'node_modules', link: '/Engineered/node_modules' },
-      { text: 'monorepo和workspace', link: '/Engineered/monorepo-workspace' },
-      { text: 'Web Component', link: '/Engineered/web-component' },
-      { text: '模块联邦', link: '/Engineered/module-federation' },
-    ]
-  },
-  {
-    text: '性能优化',
-    collapsible: true,
-    items: []
-  },
-  {
-    text: 'TypeScript',
-    collapsible: true,
-    items: [
-      { text: '类型', link: '/TypeScript/types' },
-    ]
-  },
-  {
-    text: '网络',
-    collapsible: true,
-    items: [
-      { text: 'Ajax', link: '/Network/AJAX' },
-      { text: 'http状态码', link: '/Network/http状态码' },
-    ]
-  },
-  {
-    text: '设计模式',
-    collapsible: true,
-    items: []
-  },
-  {
-    text: '算法',
-    collapsible: true,
-    items: []
-  },
-  {
-    text: '安全',
-    collapsible: true,
-    items: []
-  },
-  {
-    text: 'NodeJs',
-    collapsible: true,
-    items: []
-  },
-  {
-    text: '其他',
-    collapsible: true,
-    items: [
-      { text: 'URL到页面显示', link: '/Other/URL到页面显示.md' }
-    ]
-  }
-]
+export default {
+  '/summary/': [
+    {
+      text: 'JavaScript 基础',
+      collapsible: true,
+      items: [
+        { text: '变量类型', link: '/summary/JavaScript/types' },
+        { text: '原型链', link: '/summary/JavaScript/原型链' },
+        { text: 'instanceof', link: '/summary/JavaScript/instanceof' },
+        { text: '执行上下文和执行栈', link: '/summary/JavaScript/执行上下文和执行栈' },
+        { text: '闭包', link: '/summary/JavaScript/闭包' },
+        { text: 'call apply bind', link: '/summary/JavaScript/call-apply-bind' },
+        { text: 'new', link: '/summary/JavaScript/new' },
+        { text: '事件机制', link: '/summary/JavaScript/事件机制' },
+        { text: 'cookie session localStorage', link: '/summary/JavaScript/cookie-session-localStorage' },
+        { text: 'PWA和Service Worker', link: '/summary/JavaScript/PWA-ServiceWorker' },
+        { text: 'WebWorker', link: '/summary/JavaScript/WebWorker' },
+        { text: 'Promise', link: '/summary/JavaScript/Promise' },
+        { text: 'ES6', link: '/summary/JavaScript/ES6' },
+      ]
+    },
+    {
+      text: 'CSS 基础',
+      collapsible: true,
+      items: [
+        { text: 'flex布局', link: '/summary/CSS/flex' },
+        { text: 'grid布局', link: '/summary/CSS/grid' },
+        { text: '居中', link: '/summary/CSS/居中' },
+        { text: '清除浮动', link: '/summary/CSS/清除浮动' },
+        { text: '盒模型', link: '/summary/CSS/盒模型' },
+        { text: 'BFC', link: '/summary/CSS/bfc' },
+        { text: '预处理器', link: '/summary/CSS/预处理器' },
+        { text: '回流和重绘', link: '/summary/CSS/回流和重绘' },
+        { text: '1px问题', link: '/summary/CSS/1px问题' },
+        { text: '选择器和优先级', link: '/summary/CSS/选择器和优先级' },
+        { text: 'canvas画一个爱心', link: '/summary/CSS/爱心' },
+      ]
+    },
+    {
+      text: 'Vue',
+      collapsible: true,
+      items: [
+        { text: 'mvvm', link: '/summary/Vue/mvvm' },
+        { text: '生命周期', link: '/summary/Vue/lifecycle' },
+        { text: 'computed和watch', link: '/summary/Vue/computed-watch' },
+        { text: '响应式原理', link: '/summary/Vue/reactivity' },
+        { text: 'nextTick', link: '/summary/Vue/nextTick' },
+        { text: '组件通信', link: '/summary/Vue/组件通信' },
+        { text: 'virtualDom', link: '/summary/Vue/virtualDom' },
+        { text: 'diff', link: '/summary/Vue/diff' },
+        { text: 'keep-alive', link: '/summary/Vue/keep-alive' },
+        { text: 'vuex和pinia', link: '/summary/Vue/vuex-pinia' },
+        { text: 'Vue Router', link: '/summary/Vue/vue-router' },
+      ]
+    },
+    {
+      text: '前端工程化',
+      collapsible: true,
+      items: [
+        { text: '模块化', link: '/summary/Engineered/modular' },
+        { text: 'npm yarn pnpm 发展历程', link: '/summary/Engineered/npm-yarn-pnpm' },
+        { text: 'node_modules', link: '/summary/Engineered/node_modules' },
+        { text: 'monorepo和workspace', link: '/summary/Engineered/monorepo-workspace' },
+        { text: 'Web Component', link: '/summary/Engineered/web-component' },
+        { text: '模块联邦', link: '/summary/Engineered/module-federation' },
+      ]
+    },
+    {
+      text: '性能优化',
+      collapsible: true,
+      items: []
+    },
+    {
+      text: 'TypeScript',
+      collapsible: true,
+      items: [
+        { text: '类型', link: '/summary/TypeScript/types' },
+      ]
+    },
+    {
+      text: '网络',
+      collapsible: true,
+      items: [
+        { text: 'Ajax', link: '/summary/Network/AJAX' },
+        { text: 'http状态码', link: '/summary/Network/http状态码' },
+      ]
+    },
+    {
+      text: '设计模式',
+      collapsible: true,
+      items: []
+    },
+    {
+      text: '算法',
+      collapsible: true,
+      items: []
+    },
+    {
+      text: '安全',
+      collapsible: true,
+      items: []
+    },
+    {
+      text: 'NodeJs',
+      collapsible: true,
+      items: []
+    },
+    {
+      text: '其他',
+      collapsible: true,
+      items: [
+        { text: 'URL到页面显示', link: '/summary/Other/URL到页面显示.md' }
+      ]
+    }
+  ],
+  '/code/': [],
+  'interview': []
+}
