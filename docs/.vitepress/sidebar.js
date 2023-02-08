@@ -5,13 +5,13 @@ export default {
       collapsible: true,
       items: [
         { text: '变量类型', link: '/summary/JavaScript/types' },
-        { text: '原型链', link: '/summary/JavaScript/原型链' },
+        { text: '原型链', link: '/summary/JavaScript/prototype-chain' },
         { text: 'instanceof', link: '/summary/JavaScript/instanceof' },
-        { text: '执行上下文和执行栈', link: '/summary/JavaScript/执行上下文和执行栈' },
-        { text: '闭包', link: '/summary/JavaScript/闭包' },
+        { text: '执行上下文和执行栈', link: '/summary/JavaScript/context' },
+        { text: '闭包', link: '/summary/JavaScript/closure' },
         { text: 'call apply bind', link: '/summary/JavaScript/call-apply-bind' },
         { text: 'new', link: '/summary/JavaScript/new' },
-        { text: '事件机制', link: '/summary/JavaScript/事件机制' },
+        { text: '事件机制', link: '/summary/JavaScript/event-loop' },
         { text: 'cookie session localStorage', link: '/summary/JavaScript/cookie-session-localStorage' },
         { text: 'PWA和Service Worker', link: '/summary/JavaScript/PWA-ServiceWorker' },
         { text: 'WebWorker', link: '/summary/JavaScript/WebWorker' },
@@ -25,15 +25,15 @@ export default {
       items: [
         { text: 'flex布局', link: '/summary/CSS/flex' },
         { text: 'grid布局', link: '/summary/CSS/grid' },
-        { text: '居中', link: '/summary/CSS/居中' },
-        { text: '清除浮动', link: '/summary/CSS/清除浮动' },
-        { text: '盒模型', link: '/summary/CSS/盒模型' },
+        { text: '居中', link: '/summary/CSS/center' },
+        { text: '清除浮动', link: '/summary/CSS/clear-float' },
+        { text: '盒模型', link: '/summary/CSS/box-model' },
         { text: 'BFC', link: '/summary/CSS/bfc' },
-        { text: '预处理器', link: '/summary/CSS/预处理器' },
-        { text: '回流和重绘', link: '/summary/CSS/回流和重绘' },
-        { text: '1px问题', link: '/summary/CSS/1px问题' },
-        { text: '选择器和优先级', link: '/summary/CSS/选择器和优先级' },
-        { text: 'canvas画一个爱心', link: '/summary/CSS/爱心' },
+        { text: '预处理器', link: '/summary/CSS/preprocessor' },
+        { text: '回流和重绘', link: '/summary/CSS/reflow-repaint' },
+        { text: '1px问题', link: '/summary/CSS/1px' },
+        { text: '选择器和优先级', link: '/summary/CSS/selector' },
+        { text: 'canvas画一个爱心', link: '/summary/CSS/heart' },
       ]
     },
     {
@@ -45,7 +45,7 @@ export default {
         { text: 'computed和watch', link: '/summary/Vue/computed-watch' },
         { text: '响应式原理', link: '/summary/Vue/reactivity' },
         { text: 'nextTick', link: '/summary/Vue/nextTick' },
-        { text: '组件通信', link: '/summary/Vue/组件通信' },
+        { text: '组件通信', link: '/summary/Vue/component-communication' },
         { text: 'virtualDom', link: '/summary/Vue/virtualDom' },
         { text: 'diff', link: '/summary/Vue/diff' },
         { text: 'keep-alive', link: '/summary/Vue/keep-alive' },
@@ -82,7 +82,7 @@ export default {
       collapsible: true,
       items: [
         { text: 'Ajax', link: '/summary/Network/AJAX' },
-        { text: 'http状态码', link: '/summary/Network/http状态码' },
+        { text: 'http状态码', link: '/summary/Network/http-status-code' },
       ]
     },
     {
@@ -109,7 +109,7 @@ export default {
       text: '其他',
       collapsible: true,
       items: [
-        { text: 'URL到页面显示', link: '/summary/Other/URL到页面显示.md' }
+        { text: 'URL到页面显示', link: '/summary/Other/url-to-display.md' }
       ]
     }
   ],
