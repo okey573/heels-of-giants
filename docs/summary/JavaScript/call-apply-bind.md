@@ -2,7 +2,7 @@
 title: call apply bind
 ---
 
-_本文重点在[实现bind](/JavaScript/call-apply-bind#实现bind)_
+_本文重点在[实现bind](/summary/JavaScript/call-apply-bind#实现bind)_
 
 ## 实现call
 
@@ -49,7 +49,7 @@ Function.prototype.theBind = function () {
 }
 ```
 
-要理解上面高亮的这行代码，需要理解[new操作符](/JavaScript/new)，[apply方法](/JavaScript/call-apply-bind#实现apply)，和[instanceof](/JavaScript/instanceof)
+要理解上面高亮的这行代码，需要理解[new操作符](/summary/JavaScript/new)，[apply方法](/summary/JavaScript/call-apply-bind#实现apply)，和[instanceof](/summary/JavaScript/instanceof)
 
 new操作符 是把构造函数的原型对象的一个拷贝对象当做构造函数的上下文，然后执行这个构造函数，然后返回对象
 
