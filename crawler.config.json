@@ -1,6 +1,6 @@
 {
-  "index_name": "heels-of-giants",
-  "start_urls": ["http://localhost:5173/"],
+  "index_name": "heels-of-giants docs search engine",
+  "start_urls": ["https://loyer.wang/docs/"],
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
