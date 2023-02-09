@@ -4,7 +4,7 @@ module.exports = {
   title: '巨人之踵',
   base: '/docs',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: './favicon.ico' }]
   ],
   ignoreDeadLinks: true,
   lastUpdated: true,
