@@ -37,6 +37,8 @@ function nav () {
       items: [
         { text: '💪 实现action自动部署pages', link: '/action/' },
         { text: '💪 实现vitepress集成algolia', link: '/algolia/' },
+        { text: '💪 实现create-custom-app', link: '/create-custom-app/' },
+        { text: '💪 实现一个前端cli', link: '/cli/' },
       ]
     }
   ]
