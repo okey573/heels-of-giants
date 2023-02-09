@@ -1,6 +1,6 @@
 {
   "index_name": "heels-of-giants docs search engine",
-  "start_urls": ["https://loyer.wang/docs/"],
+  "start_urls": ["https://okey573.github.io/docs/"],
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
