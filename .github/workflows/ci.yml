@@ -1,4 +1,4 @@
-name: Deploy to Github Pages
+name: CI
 on:
   push:
     branches:
@@ -7,11 +7,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@master
 
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
+      - name: Build and Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         env:
           ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           BRANCH: gh-pages
