@@ -20,6 +20,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
+          folder: docs/.vitepress/dist
           branch: master
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
