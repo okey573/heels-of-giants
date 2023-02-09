@@ -23,5 +23,5 @@ jobs:
           folder: docs/.vitepress/dist
           branch: master
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          repository-name: okey573.github.io
+          repository-name: okey573/okey573.github.io
           target-folder: docs
