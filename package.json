@@ -1,5 +1,6 @@
 {
   "name": "heels-of-giants",
+  "homepage": "https://okey573.github.io/docs",
   "private": true,
   "scripts": {
     "dev": "vitepress dev docs",
