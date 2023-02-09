@@ -8,13 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
-      - name: Build and Deploy 🚀
+      - name: Install and Build 🔧
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # The folder the action should deploy.
-        env:
-          ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          BRANCH: master
-          BUILD_SCRIPT: npm install && npm run build
+          folder: dist
+          branch: master
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
