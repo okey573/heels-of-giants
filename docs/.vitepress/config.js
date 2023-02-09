@@ -31,5 +31,13 @@ function nav () {
     { text: '🔋 日常总结', link: '/summary/' },
     { text: '🍒 代码片段', link: '/code/' },
     { text: '📖 面试总结', link: '/interview/' },
+    {
+      text: '👻 落地实现',
+      collapsible: true,
+      items: [
+        { text: '💪 实现action自动部署pages', link: '/action/' },
+        { text: '💪 实现vitepress集成algolia', link: '/algolia/' },
+      ]
+    }
   ]
 }
