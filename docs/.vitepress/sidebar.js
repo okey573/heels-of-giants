@@ -1,7 +1,7 @@
 export default {
   '/summary/': [
     {
-      text: 'JavaScript 基础',
+      text: 'JavaScript',
       collapsible: true,
       items: [
         { text: '变量类型', link: '/summary/JavaScript/types' },
@@ -20,7 +20,7 @@ export default {
       ]
     },
     {
-      text: 'CSS 基础',
+      text: 'CSS',
       collapsible: true,
       items: [
         { text: 'flex布局', link: '/summary/CSS/flex' },
@@ -29,6 +29,7 @@ export default {
         { text: '清除浮动', link: '/summary/CSS/clear-float' },
         { text: '盒模型', link: '/summary/CSS/box-model' },
         { text: 'BFC', link: '/summary/CSS/bfc' },
+        { text: 'BEM', link: '/summary/CSS/bem' },
         { text: '预处理器', link: '/summary/CSS/preprocessor' },
         { text: '回流和重绘', link: '/summary/CSS/reflow-repaint' },
         { text: '1px问题', link: '/summary/CSS/1px' },
