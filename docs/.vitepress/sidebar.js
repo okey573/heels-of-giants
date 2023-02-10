@@ -113,6 +113,14 @@ export default {
       ]
     }
   ],
-  '/code/': [],
+  '/code/': [
+    {
+      text: '命令',
+      collapsible: false,
+      items: [
+        { text: '命令', link: '/code/command.md' }
+      ]
+    }
+  ],
   'interview': []
 }
