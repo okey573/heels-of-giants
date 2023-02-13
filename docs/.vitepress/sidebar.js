@@ -26,7 +26,6 @@ export default {
         { text: 'flex布局', link: '/summary/CSS/flex' },
         { text: 'grid布局', link: '/summary/CSS/grid' },
         { text: '居中', link: '/summary/CSS/center' },
-        { text: '清除浮动', link: '/summary/CSS/clear-float' },
         { text: '盒模型', link: '/summary/CSS/box-model' },
         { text: 'BFC', link: '/summary/CSS/bfc' },
         { text: 'BEM', link: '/summary/CSS/bem' },
@@ -115,6 +114,13 @@ export default {
     }
   ],
   '/code/': [
+    {
+      text: 'JavaScript',
+      collapsible: false,
+      items: [
+        { text: '正则表达式类', link: '/code/js/reg.md' }
+      ]
+    },
     {
       text: '命令',
       collapsible: false,
