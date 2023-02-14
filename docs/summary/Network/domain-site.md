@@ -16,8 +16,8 @@ outline: [2,6]
 ## 顶级域名
 
 - TLD：即Top-Level Domain，顶级域名，它是一个因特网域名的最后部分，也就是任何域名的最后一个点后面的字母组成的部分。比如：.com、.net、.edu等。
-- gTLD：即Generic top-level domain，通用顶级域名，是供一些特定组织使用的顶级域，以其代表组织英文名称的头几个英文字母代表，如.com代表商业机构。
-- ccTLD：即Country Code Top Level Domain，国家顶级域名，嗯，只供国家使用的，比如.cn。
+- gTLD：即Generic top-level domain，通用顶级域名，是供一些特定组织使用的顶级域，以其代表组织英文名称的头几个英文字母代表，如 .com代表商业机构。
+- ccTLD：即Country Code Top Level Domain，国家顶级域名，嗯，只供国家使用的，比如 .cn。
 - eTLD：即Effective Top-Level Domain，有效顶级域名。
 
 #### 有效顶级域名(eTLD)
@@ -30,11 +30,11 @@ _[完整的Public Suffix List](https://publicsuffix.org/list/public_suffix_list.
 
 #### eTLD+1
 
-**eTLD+1表示eTLD再加一级域名，举例a.github.io或者baidu.com.cn**
+**eTLD+1表示eTLD再加一级域名，举例`a.github.io`或者`baidu.com.cn`**
 
-为什么 a.taobao.com和 www.b.taobao.com 是同站，a.github.io 和 b.github.io 却是跨站呢？
+为什么`a.taobao.com`和`www.b.taobao.com`是同站，`a.github.io`和`b.github.io`却是跨站呢？
 
-——因为 github.io 在公共后缀列表里，但 taobao.com 不在公共后缀列表里
+——因为`github.io`在公共后缀列表里，但`taobao.com`不在公共后缀列表里
 
 ## 跨域和跨站
 
