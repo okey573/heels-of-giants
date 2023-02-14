@@ -11,6 +11,7 @@ export default {
         { text: '闭包', link: '/summary/JavaScript/closure' },
         { text: 'call apply bind', link: '/summary/JavaScript/call-apply-bind' },
         { text: 'new', link: '/summary/JavaScript/new' },
+        { text: '箭头函数', link: '/summary/JavaScript/arrow-function' },
         { text: '事件机制', link: '/summary/JavaScript/event-loop' },
         { text: 'cookie session localStorage', link: '/summary/JavaScript/cookie-session-localStorage' },
         { text: 'PWA和Service Worker', link: '/summary/JavaScript/PWA-ServiceWorker' },

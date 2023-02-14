@@ -25,14 +25,14 @@ algolia实现搜索就是通过把网站数据上传到algolia（实际上是alg
 
 修改VitePress配置文件：docs/.vitepress/config
 
-```
+```json
 {
-  algolia: {
-    appId: 'SQ5GQ6SV73',
-    apiKey: 'cba98dd04dea30f0007609408f2ccc74',
-    indexName: 'heels-of-giants docs search engine',
-    placeholder: '请输入关键词',
-    buttonText: '搜索'
+  "algolia": {
+    "appId": "SQ5GQ6SV73",
+    "apiKey": "cba98dd04dea30f0007609408f2ccc74",
+    "indexName": "heels-of-giants docs search engine", 
+    "placeholder": "请输入关键词",
+    "buttonText": "搜索"
   }
 }
 ```
