@@ -32,6 +32,12 @@ promise 有 3 个状态，分别是 pending, fulfilled 和 rejected
 - .then 或者 .catch 的参数期望是函数，传入非函数则会发生值穿透
 - promise.then属于microtask
 
+## Promise A+
+
+Promise A+ 是一个规范，只要是满足这个规范的对象，都可以当成ES6的promise来使用，例如使用await关键字等
+
+https://promisesaplus.com/
+
 ## 实现Promise
 
 _coming soon..._

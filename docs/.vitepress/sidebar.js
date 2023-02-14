@@ -13,7 +13,7 @@ export default {
         { text: 'new', link: '/summary/JavaScript/new' },
         { text: '箭头函数', link: '/summary/JavaScript/arrow-function' },
         { text: '事件机制', link: '/summary/JavaScript/event-loop' },
-        { text: 'cookie session localStorage', link: '/summary/JavaScript/cookie-session-localStorage' },
+        { text: 'cookie和web storage', link: '/summary/JavaScript/cookie-storage' },
         { text: 'PWA和Service Worker', link: '/summary/JavaScript/PWA-ServiceWorker' },
         { text: 'WebWorker', link: '/summary/JavaScript/WebWorker' },
         { text: 'Promise', link: '/summary/JavaScript/Promise' },
@@ -82,6 +82,7 @@ export default {
       text: '网络',
       collapsible: true,
       items: [
+        { text: '域和站', link: '/summary/Network/domain-site' },
         { text: 'Ajax', link: '/summary/Network/AJAX' },
         { text: 'http状态码', link: '/summary/Network/http-status-code' },
       ]
@@ -94,12 +95,16 @@ export default {
     {
       text: '算法',
       collapsible: true,
-      items: []
+      items: [
+        { text: '排序', link: '/summary/Algorithm/sort' },
+      ]
     },
     {
       text: '安全',
       collapsible: true,
-      items: []
+      items: [
+        { text: 'XSS和CSRF', link: '/summary/Security/XSS-CSRF' }
+      ]
     },
     {
       text: 'NodeJs',
