@@ -42,6 +42,15 @@ SameSite属性可以设置三个值：Strict、Lax、None
 
 这一默认值是可以在浏览器中修改的，`chrome://flags/#same-site-by-default-cookies`。但是在后来的某个版本中被去掉了
 
+#### Cookie的SameParty属性
+
+在第一方Cookie和第三方Cookie被区别对待的情况下，Chrome新推出了一个First-Party Sets策略，它可以允许由同一实体拥有的不同关域名都被视为第一方
+
+SameParty的cookie是配合First-Party Sets的使用，First-Party Sets的配置是托管在`/.well-known/first-party-set`路由下，members和owner都要配置
+
+配置完成后，设置了SameParty属性的就能使用了
+
+
 ## Web Storage
 
 > web Storeage的概念和cookie很相似，区别在于web Storage更够储存各多的数据，cookie的大小是受限的，并且每次请求一个新的页面的时候都会被发送过去，无形中浪费了带宽，另外cookie还需要指定作用域，不可跨越调用。
