@@ -49,6 +49,7 @@ export default {
         { text: '组件通信', link: '/summary/Vue/component-communication' },
         { text: 'virtualDom', link: '/summary/Vue/virtualDom' },
         { text: 'diff', link: '/summary/Vue/diff' },
+        { text: 'key', link: '/summary/Vue/key' },
         { text: 'keep-alive', link: '/summary/Vue/keep-alive' },
         { text: 'vuex和pinia', link: '/summary/Vue/vuex-pinia' },
         { text: 'Vue Router', link: '/summary/Vue/vue-router' },
