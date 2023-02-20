@@ -32,7 +32,7 @@ _[完整的Public Suffix List](https://publicsuffix.org/list/public_suffix_list.
 
 **eTLD+1表示eTLD再加一级域名，举例`a.github.io`或者`baidu.com.cn`**
 
-为什么`a.taobao.com`和`www.b.taobao.com`是同站，`a.github.io`和`b.github.io`却是跨站呢？
+为什么`a.taobao.com`和`b.taobao.com`是同站，`a.github.io`和`b.github.io`却是跨站呢？
 
 ——因为`github.io`在公共后缀列表里，但`taobao.com`不在公共后缀列表里
 

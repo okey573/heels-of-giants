@@ -47,11 +47,10 @@ export default {
         { text: '响应式原理', link: '/summary/Vue/reactivity' },
         { text: 'nextTick', link: '/summary/Vue/nextTick' },
         { text: '组件通信', link: '/summary/Vue/component-communication' },
-        { text: 'virtualDom', link: '/summary/Vue/virtualDom' },
         { text: 'diff', link: '/summary/Vue/diff' },
         { text: 'key', link: '/summary/Vue/key' },
         { text: 'keep-alive', link: '/summary/Vue/keep-alive' },
-        { text: 'vuex和pinia', link: '/summary/Vue/vuex-pinia' },
+        { text: 'vuex和pinia', link: '/summary/Vue/store' },
         { text: 'Vue Router', link: '/summary/Vue/vue-router' },
       ]
     },
@@ -59,7 +58,7 @@ export default {
       text: '前端工程化',
       collapsible: true,
       items: [
-        { text: '模块化', link: '/summary/Engineered/modular' },
+        { text: '模块化', link: '/summary/Engineered/module' },
         { text: 'npm yarn pnpm 发展历程', link: '/summary/Engineered/npm-yarn-pnpm' },
         { text: 'node_modules', link: '/summary/Engineered/node_modules' },
         { text: 'monorepo和workspace', link: '/summary/Engineered/monorepo-workspace' },
@@ -91,7 +90,10 @@ export default {
     {
       text: '设计模式',
       collapsible: true,
-      items: []
+      items: [
+        { text: '发布订阅模式', link: '/summary/Pattern/pub-sub' },
+        { text: '观察者模式', link: '/summary/Pattern/observe' },
+      ]
     },
     {
       text: '算法',
@@ -108,9 +110,11 @@ export default {
       ]
     },
     {
-      text: 'NodeJs',
+      text: 'NodeJS',
       collapsible: true,
-      items: []
+      items: [
+        { text: '关于__dirname', link: '/summary/NodeJS/dirname' }
+      ]
     },
     {
       text: '其他',
@@ -125,7 +129,15 @@ export default {
       text: 'JavaScript',
       collapsible: false,
       items: [
-        { text: '正则表达式类', link: '/code/js/reg.md' }
+        { text: '正则表达式类', link: '/code/js/reg.md' },
+        { text: '数组类型', link: '/code/js/array.md' }
+      ]
+    },
+    {
+      text: 'NodeJS',
+      collapsible: false,
+      items: [
+        { text: 'file', link: '/code/nodejs/file.md' }
       ]
     },
     {
