@@ -120,7 +120,9 @@ export default {
       text: '其他',
       collapsible: true,
       items: [
-        { text: 'URL到页面显示', link: '/summary/Other/url-to-display.md' }
+        { text: 'URL到页面显示', link: '/summary/Other/url-to-display.md' },
+        { text: '垃圾回收机制', link: '/summary/Other/gc.md' },
+        { text: '快属性和慢属性', link: '/summary/Other/fast-slow-properties.md' },
       ]
     }
   ],
