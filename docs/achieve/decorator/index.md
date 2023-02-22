@@ -1,5 +1,5 @@
 ---
-title: 在vue中使用装饰器
+title: 实现在vue中用decorator处理函数
 ---
 
 在vue中使用装饰器

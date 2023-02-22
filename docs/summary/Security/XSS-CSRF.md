@@ -18,7 +18,7 @@ Cross-Site Scripting(跨站脚本攻击)，简称XSS(避免和CSS重名)，是�
 - **存储型 (Stored XSS)**
   所谓存储型就是，用户在网页中输入的内容经页面提交到服务器后，服务器将该数据先原封不动的存储到数据库中，等到其他用户访问该网站的时候，从服务器中读取出数据，从而让其中包含的脚本执行，所以存储型不是立即被攻击，而是等其他用户访问该网站的时候才生效，但是其由于被存储到了数据库中，所以其攻击范围更广为网站的所有访问者。最常见的就是某个黑客用户提交了一篇文章，而文章中被注入了一段脚本，而该文章会被提交到数据库中，所以等到其他用户访问该文章的时候就会被攻击。 反射型和存储型XSS的区别是看用户提交的数据有没有被服务器存储起来。
 - **基于DOM (DOM-based or local XSS)**
-  所谓基于DOM类型就是，使用到的数据没有经过服务器，而是直接从DOM、Window等对象中获取，比如，document.location、document.URL、document.referrer，将这些数据插入到DOM中后导致的XSS攻击。比较常见的就是，当我们在某个网站注册成功后，通常会跳转到一个验证页面，验证页面内容主要包括多少秒之后自动跳转到某个页面，或者点击链接立即跳转到某个页面，如:http://localhost:3000/validate.html？redirectTo=javascript:alert('xss')，而我们的页面会根据传入的redirectTo的值进行跳转。基于DOM类型的XSS攻击关键是数据没有经过服务器，而是来自于DOM操作。
+  所谓基于DOM类型就是，使用到的数据没有经过服务器，而是直接从DOM、Window等对象中获取，比如，document.location、document.URL、document.referrer，将这些数据插入到DOM中后导致的XSS攻击。比较常见的就是，当我们在某个网站注册成功后，通常会跳转到一个验证页面，验证页面内容主要包括多少秒之后自动跳转到某个页面，或者点击链接立即跳转到某个页面，如: `http://localhost:3000/validate.html?redirectTo=javascript:alert('xss')` ，而我们的页面会根据传入的redirectTo的值进行跳转。基于DOM类型的XSS攻击关键是数据没有经过服务器，而是来自于DOM操作。
 
 #### XSS防御
 

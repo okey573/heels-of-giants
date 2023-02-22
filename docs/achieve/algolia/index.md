@@ -1,5 +1,5 @@
 ---
-title: VitePress集成algolia实现搜索
+title: 实现VitePress集成algolia
 outline: [2,6]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: action自动部署pages
+title: 实现action自动部署pages
 outline: [2,6]
 ---
 

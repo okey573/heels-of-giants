@@ -1,5 +1,5 @@
 ---
-title: cli
+title: 实现一个前端cli工具
 outline: [2,6]
 ---
 

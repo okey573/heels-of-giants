@@ -1,5 +1,5 @@
 ---
-title: 浏览器插件
+title: 实现一个同步cookies的浏览器插件
 ---
 
 有些系统是通过登录后在cookie中注入token，然后在不同系统通过携带cookie信息进行认证的。
