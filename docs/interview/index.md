@@ -54,6 +54,29 @@ outline: [2,6]
 
   还是改成了使用CommonJS
 
+- cli 中判断 sdk 的版本实际只需要读取一个version文件就行，怎么避免把整个 repo clone 下来
+
+  `git archive` 导出指定目录 zip 格式，然后解压
+
+  ```javascript
+  execute(`git archive -o ${tempZipSdkDir} --remote "${repo}" "${branch}" "${latestSdkPath}"`)
+  await compressing.zip.uncompress(tempZipSdkDir, tempSdkDir)
+  ```
+  
+</p>
+</details>
+
+## 最近新学到的内容？
+
+<details>
+<summary><b>答案</b></summary>
+<p>
+
+- scroll snap
+- fast-glob
+- Deno
+- vmin
+
 </p>
 </details>
 
