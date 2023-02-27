@@ -11,6 +11,6 @@
     "fast-glob": "^3.2.12",
     "gray-matter": "^4.0.3",
     "nprogress": "^0.2.0",
-    "vitepress": "^1.0.0-alpha.48"
+    "vitepress": "^1.0.0-alpha.27"
   }
 }
