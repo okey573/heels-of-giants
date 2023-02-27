@@ -50,6 +50,7 @@ function translateGroup (group) {
     'Pattern': '设计模式',
     'Security': '安全',
     'js': 'JavaScript',
-    'nodejs': 'NodeJs'
+    'nodejs': 'NodeJs',
+    'Bundler': '构建工具'
   })[group] || group
 }
