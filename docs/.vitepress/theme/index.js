@@ -6,7 +6,7 @@ import ClickAnimation from './plugins/ClickAnimation'
 export default {
   ...DefaultTheme,
   enhanceApp (ctx) {
-    NProgress(ctx, { showSpinner: false })
-    ClickAnimation()
+    // NProgress(ctx, { showSpinner: false })
+    // ClickAnimation()
   }
 }
