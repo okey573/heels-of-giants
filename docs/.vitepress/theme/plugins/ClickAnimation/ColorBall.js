@@ -1,7 +1,6 @@
 export const defaultParams = {
-  colors: ['#00dfd5', '#6eff8a', '#6386ff', '#f9f383'],
-  size: 15,
-  maxCount: 10
+  size: 10,
+  maxCount: 50
 }
 
 class ColorBall {
@@ -41,7 +40,7 @@ class ColorBall {
       ball.style.webkitTransform = 'translate3d(0px, 0px, 0px) scale(1)'
       ball.style.transition = 'transform 1s ' + curLoop * loopTimer / 1000 + 's ease-out'
       ball.style.webkitTransition = 'transform 1s ' + curLoop * loopTimer / 1000 + 's ease-out'
-      ball.style.backgroundColor = getOneRandom(this.params.colors)
+      ball.style.backgroundColor = getORandomColor()
       fragment.appendChild(ball)
       ballElements.push(ball)
       // 性能优化终极版
@@ -73,8 +72,11 @@ class ColorBall {
   }
 }
 
-function getOneRandom (arr) {
-  return arr[Math.floor(Math.random() * arr.length)]
+function getORandomColor (arr) {
+  const r = Math.floor(Math.random() * 256)
+  const g = Math.floor(Math.random() * 256)
+  const b = Math.floor(Math.random() * 256)
+  return `#${r.toString(16)}${g.toString(16)}${b.toString(16)}`
 }
 
 function _run (ball) {
