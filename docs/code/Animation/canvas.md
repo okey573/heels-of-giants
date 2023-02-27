@@ -1,3 +1,10 @@
+---
+title: canvas类动画
+---
+
+## 一个 vue 版本的爱心动画
+
+```vue
 <template>
   <div class="loving-heart">
     <canvas id="pinkBoard" ref="pinkBoard" class="pink-board"></canvas>
@@ -376,3 +383,4 @@
     }
   }
 </style>
+```

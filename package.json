@@ -10,7 +10,6 @@
   "devDependencies": {
     "fast-glob": "^3.2.12",
     "gray-matter": "^4.0.3",
-    "sass": "^1.56.0",
     "vitepress": "^1.0.0-alpha.27"
   }
 }
