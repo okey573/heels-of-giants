@@ -1,0 +1,31 @@
+body {
+  cursor: url('/mouse/Arrow.cur'), default;
+}
+
+select {
+  cursor: url('/mouse/Hand.cur'), pointer;
+}
+
+button, a:hover {
+  cursor: url('/mouse/Hand2.cur'), pointer;
+}
+
+input {
+  cursor: url('/mouse/Help.cur'), text;
+}
+
+textarea, input:focus {
+  cursor: url('/mouse/IBeam.cur'), text;
+}
+
+code {
+  cursor: url('/mouse/Handwriting.cur'), default;
+}
+
+pre > code {
+  cursor: url('/mouse/IBeam.cur'), default;
+}
+
+button.copy {
+  cursor: url('/mouse/Hand2.cur'), pointer !important;
+}
