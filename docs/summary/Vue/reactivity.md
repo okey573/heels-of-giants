@@ -73,4 +73,4 @@ Proxy 更加便捷
   - setPrototypeOf
   - apply
   - construct
-- 但是兼容性比defineProperty差，基本不支持ie。而且没有一个完美的 Ployfiil
+- 但是兼容性比defineProperty差，基本不支持ie。而且没有一个完美的 Polyfill
