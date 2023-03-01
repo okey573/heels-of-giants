@@ -43,7 +43,7 @@ function getItems (module) {
 
 function translateGroup (group) {
   return ({
-    'Algorithm': '算法',
+    'Algorithm-DataStructure': '算法和数据结构',
     'Engineered': '工程化',
     'NetWork': '网络',
     'Other': '其他',

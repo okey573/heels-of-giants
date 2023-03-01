@@ -10,9 +10,9 @@ hero:
     alt: ChoDocs
   actions:
     - theme: brand
-      text: Get Started
-      link: /summary/
+      text: Do the Rest
+      link: /todo/
     - theme: alt
       text: View on GitHub
-      link: https://github.com
+      link: https://github.com/okey573/heels-of-giants
 ---

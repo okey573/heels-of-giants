@@ -1,10 +1,13 @@
 ---
-title: 链表
+title: 数组和链表
+outline: [2,6]
 ---
 
-一些链表类的算法
+# 数组和链表
 
-## 反转单链表
+## 链表
+
+### 反转单链表
 
 ```javascript
 function reserve (head) {
