@@ -75,3 +75,14 @@ const delay = (duration) => new Promise(resolve => setTimeout(resolve, duration)
 ```javascript
 const typeOf = (o) => Object.prototype.toString.call(o).match(/\[object (.*?)\]/)[1].toLowerCase()
 ```
+
+## createDefaultValueObjectArray
+
+创建一个指定长度的数组，存在每个数组元素都指向同一块内存的引用问题
+
+```javascript
+const createArray = (length, obj) => {
+  return Array.apply(null, { length }).map(_ => obj)
+  // return Array.from(Array(length), item => obj)
+}
+```
