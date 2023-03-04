@@ -23,10 +23,11 @@ function getItems (module) {
   // 根据第一级目录分组收纳
   const result = []
   for (const file of files) {
+    const { data } = matter.read(`docs/${module}/` + file)
+    if (data.hidden) continue
     const group = file.split('/')[0]
     const groupZh = translateGroup(group)
     const index = result.findIndex(res => res.text === groupZh)
-    const { data } = matter.read(`docs/${module}/` + file)
     const item = { text: data.title, link: `/${module}/` + file }
     if (index > -1) {
       result[index].items.push(item)

@@ -1,5 +1,6 @@
 ---
 title: 排序
+hidden: true
 ---
 
 # 一些排序类的算法
