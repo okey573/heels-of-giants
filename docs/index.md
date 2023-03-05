@@ -1,5 +1,5 @@
 ---
-layout: home3
+layout: home
 titleTemplate: 巨人之踵
 
 hero:
