@@ -7,7 +7,7 @@ hero:
   tagline: Let's climb up... 
   image:
     src: /it.svg
-    alt: ChoDocs
+    alt: okey573 docs
   actions:
     - theme: brand
       text: Do the Rest
