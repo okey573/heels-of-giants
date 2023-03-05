@@ -32,3 +32,61 @@ git archive [--format=<fmt>] [--list] [--prefix=<prefix>/] [<extra>]
               [--remote=<repo> [--exec=<git-upload-archive>]] <tree-ish>
               [<path>...]
 ```
+
+#### 更新已经推送的 commit 信息
+
+先执行下面的脚本
+
+```shell
+#!/bin/sh
+
+git filter-branch -f --env-filter '
+
+an="$GIT_AUTHOR_NAME"
+am="$GIT_AUTHOR_EMAIL"
+cn="$GIT_COMMITTER_NAME"
+cm="$GIT_COMMITTER_EMAIL"
+
+
+oldName="ruifeng.kuang"
+oldEmail="ruifeng.kuang@vipshop.com"
+newName="okey573"
+newEmail="854647481@qq.com"
+
+if [ "$GIT_COMMITTER_EMAIL" = "$oldEmail" ]
+then
+    cn="$newName"
+    cm="$newEmail"
+fi
+
+if [ "$GIT_COMMITTER_NAME" -eq "$oldName" ]
+then
+    cn="$newName"
+    cm="$newEmail"
+fi
+
+
+if [ "$GIT_AUTHOR_EMAIL" = "$oldEmail" ]
+then
+    an="$newName"
+    am="$newEmail"
+fi
+
+if [ "$GIT_AUTHOR_NAME" -eq "$oldName" ]
+then
+    an="$newName"
+    am="$newEmail"
+fi
+
+export GIT_AUTHOR_NAME="$an"
+export GIT_AUTHOR_EMAIL="$am"
+export GIT_COMMITTER_NAME="$cn"
+export GIT_COMMITTER_EMAIL="$cm"
+'
+```
+
+然后强制推送
+
+```shell
+git push --force --tags origin 'refs/heads/*'
+```
