@@ -2,9 +2,8 @@
 title: http
 ---
 
-https://juejin.cn/post/6844903844216832007
-
-https://juejin.cn/post/6844904116339261447#heading-36
+https://www.51cto.com/article/665542.html
+https://juejin.cn/post/6844903830916694030
 
 ## http 协议
 
