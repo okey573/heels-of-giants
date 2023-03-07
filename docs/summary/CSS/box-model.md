@@ -21,6 +21,5 @@ outline: [2,6]
 
 ## 设置盒模型类型的方法
 
-- css 设置标准模型：box-sizing: context-box (也是浏览器默认的盒模型)；
-- css 设置Ie模型：box-sizing: border-box
-
+- css 设置标准模型：`box-sizing: context-box` (也是浏览器默认的盒模型)；
+- css 设置Ie模型：`box-sizing: border-box`
