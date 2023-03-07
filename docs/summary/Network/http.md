@@ -19,5 +19,7 @@ https://juejin.cn/post/6844903830916694030
 
 ## get 和 post 的区别
 
+https://www.cnblogs.com/logsharing/p/8448446.html
+
 ## 常见的报文头
 
