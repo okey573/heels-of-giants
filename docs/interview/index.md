@@ -61,7 +61,7 @@ outline: [2,6]
   execute(`git archive -o ${tempZipSdkDir} --remote "${repo}" "${branch}" "${latestSdkPath}"`)
   await compressing.zip.uncompress(tempZipSdkDir, tempSdkDir)
   ```
-  
+
 </p>
 </details>
 
@@ -153,6 +153,90 @@ function fn (str) {
     }
   }
   console.log('输出==>: ', [...stack.reverse(), ...result].join(''), '\n')
+}
+```
+
+</p>
+</details>
+
+#### LC 31. 下一个排列
+
+<details>
+<summary><b>题目</b></summary>
+<p>
+
+[题目](https://leetcode.cn/problems/next-permutation)
+
+理解： 找几个数字排列组合后，大于它的数字中的最小值...
+
+</p>
+</details>
+
+<details>
+<summary><b>答案</b></summary>
+<p>
+
+```typescript
+function nextPermutation(nums: number[]): void {
+  const swap = (nums, i, j) => {
+    const temp = nums[i]
+    nums[i] = nums[j]
+    nums[j] = temp
+  }
+
+  const reverse = (nums, start) => {
+    let left = start
+    let right = nums.length - 1
+    while (left < right) {
+      swap(nums, left, right)
+      left++
+      right--
+    }
+  }
+
+  let i = nums.length - 2
+  /**
+   * step1: 找到数组中从右开始 [... a,b ...] 找到第一个 【a < b】 a 的位置
+   */
+  while (i >= 0) {
+    if (nums[i] < nums[i + 1]) {
+      break
+    }
+    i--
+  }
+  /**
+   * step2:
+   * 将上面step1找到的a的位置设为 i
+   *
+   * - 如果 i < 0 (也可能等于 -1)就说明 nums 是严格递减的数组， 它的下一个排列就是将它反转
+   *
+   * - 如果 i >= 0 进到step3
+   */
+  if (i < 0) {
+    // 因为题目要求不返回，操作自身 所以要自身反转 不能直接nums.reverse()
+    reverse(nums, i + 1)
+  } else {
+    /**
+     * step3:
+     * 找到 i 右边，最接近nums[i]且大于nums[i]的数字位置（也就是所有大于nums[i]中的最小的数字位置）
+     * 因为上面找到i的逻辑是递减的，所以i后面的数组部分是严格递减的，所以从数组结尾开始往前遍历，第一个大于num[i]的数字就是我们要找的数字
+     * 将上面找到的数字设为j
+     */
+    let j = nums.length - 1
+    while (j >= 0 && nums[i] >= nums[j]) {
+      j--
+    }
+    /**
+     * step4:
+     * 交换 i 和 j对应的数字
+     */
+    swap(nums, i, j)
+    /**
+     * step5:
+     * 将 i 后面的数组部分按递增顺序排序就得到了结果
+     */
+    reverse(nums, i + 1)
+  }
 }
 ```
 
