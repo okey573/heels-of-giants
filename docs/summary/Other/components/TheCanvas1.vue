@@ -24,6 +24,8 @@
   .wrapper {
     width: 100%;
     height: 400px;
+    margin-top: 20px;
+
   }
 
   canvas {

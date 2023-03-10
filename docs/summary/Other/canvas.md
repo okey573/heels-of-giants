@@ -74,7 +74,9 @@ requestAnimationFrame采用系统时间间隔，保持最佳绘制效率，不�
 - 动画
 
 <script setup>
-import TheCanvas from './components/TheCanvas.vue'
+import TheCanvas1 from './components/TheCanvas1.vue'
+import TheCanvas2 from './components/TheCanvas2.vue'
 </script>
 
-<TheCanvas />
+<TheCanvas1 />
+<TheCanvas2 />
