@@ -48,10 +48,14 @@ export class Point {
 
 
 export class Graph {
-  constructor (cvs, ctx, pointNumber = 20, maxDis = 200) {
+  constructor (cvs, ctx, pointNumber = 20, maxDis) {
     this.cvs = cvs
     this.ctx = ctx
     this.points = new Array(pointNumber).fill(0).map(() => new Point(cvs, ctx))
+    cvs.height
+    if (!maxDis) {
+      maxDis = Math.floor(cvs.height / 5)
+    }
     this.maxDis = maxDis
   }
 

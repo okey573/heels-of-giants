@@ -34,10 +34,10 @@ const draw = ({ cvs, ctx, fontSize, columnCount, charIndex }) => {
 onMounted(() => {
     const cvs = canvasRef.value
     const ctx = cvs.getContext('2d')
-    cvs.width = cvs.clientWidth * devicePixelRatio
-    cvs.height = cvs.clientHeight * devicePixelRatio
+    cvs.width = cvs.clientWidth 
+    cvs.height = cvs.clientHeight
 
-    const fontSize = 10 * devicePixelRatio
+    const fontSize = 10
     const font = `${fontSize}px "Roboto Mono"`
     ctx.font = font
     const columnCount = Math.floor(cvs.width / fontSize)
