@@ -269,3 +269,7 @@ class FileListPlugin {
 
 module.exports = FileListPlugin;
 ```
+
+## 优化
+
+DllPlugin HappyPack ParallelUglifyPlugin [参考链接](https://www.jianshu.com/p/2487e3c5421e)
