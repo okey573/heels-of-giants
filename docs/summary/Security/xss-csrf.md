@@ -1,9 +1,9 @@
 ---
-title: XSS和CSRF
+title: XSS 和 CSRF
 outline: [2,6]
 ---
 
-XSS和CSRF
+# XSS 和 CSRF
 
 ## XSS
 
@@ -24,6 +24,7 @@ Cross-Site Scripting(跨站脚本攻击)，简称XSS(避免和CSS重名)，是�
 
 - 将用于登录相关的cookie设置为httpOnly，避免被客户端脚本直接读取。
 - 对用户输入和输出进行过滤，对其中注入的脚本进行转义
+- CSP（内容安全策略）以白名单的机制对网站加载或执行的资源起作用。在网页中，这样的策略通过 HTTP 头信息或者 meta 元素定义。CSP虽然提供了强大的安全保护 [参考链接](https://blog.csdn.net/weixin_47450807/article/details/123224654)
 
 ## CSRF
 
@@ -38,7 +39,12 @@ CSRF 全称为(Cross-Site Request Forgery)，即跨站请求伪造，也称为On
 - 用户必须先登录信任网站，并且在本地生成对应的cookie；
 - 在用户没有登出的情况下，访问了危险网站；
 
-
 #### CSRF防御
-- 增加token校验
-- 校验请求头的referer属性值
+
+- 增加 token 校验
+- 校验请求头的 referer 属性值
+- 合理使用 cookie 的 sameSite 属性
+
+[CSRF简介](https://blog.csdn.net/qq_45803593/article/details/124727762)
+
+[什么是 CSRF 攻击](https://blog.csdn.net/ihtml5/article/details/115283688)

@@ -19,11 +19,10 @@ MDN给出的解释是：BFC是Web页面的可视CSS渲染的一部分，是块�
 
 ## 触发条件
 
-- 根元素
-- float的值不为none
-- overflow的值不为visible
-- display的值为inline-block、table-cell、table-caption
-- position的值为absolute或fixed
+- 设置浮动，float的值不为none
+- 设置定位，position的值为absolute或fixed
+- 行内块显示模式，display的值为inline-block,inline-flex,table-cell等
+- 设置overflow，值不为visible
 
 ## BFC的作用
 

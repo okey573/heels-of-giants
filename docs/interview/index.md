@@ -32,6 +32,7 @@ outline: [2,6]
 - v-lazy指令
 - script的refer async 属性
 - gzip缓存，浏览器缓存等等
+- 虚拟列表
 
 有从编码规范带来的优化
 

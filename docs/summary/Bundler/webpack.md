@@ -135,7 +135,7 @@ module.exports.pitch = function (remainingRequest, precedingRequest, data) {
 ###### 语法转换
 
 - babel-loader 使用 Babel 加载 ES2015+ 代码并将其转换为 ES5
-- ts-loader 像加载 JavaScript 一样加载 TypeScript 2.0+
+- ts-loader 像加载 JavaScript 一样加载 TypeScript
 
 ###### 文件
 

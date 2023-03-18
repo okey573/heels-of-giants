@@ -41,3 +41,7 @@ https://promisesaplus.com/
 ## 实现Promise
 
 _coming soon..._
+
+## Promise then 第二个参数和 catch 的区别
+
+区别就是 catch 可以继续捕获 then 当中抛出的异常
