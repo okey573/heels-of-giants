@@ -1,5 +1,5 @@
 ---
-title: Vite
+title: vite
 ---
 
 # [Vite](https://cn.vitejs.dev/)

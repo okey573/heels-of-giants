@@ -1,5 +1,5 @@
 ---
-title: Web Component
+title: web component
 ---
 
 # Web Component

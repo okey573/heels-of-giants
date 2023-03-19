@@ -1,5 +1,5 @@
 ---
-title: cookie和web storage
+title: cookie 和 web storage
 outline: [2,6]
 ---
 

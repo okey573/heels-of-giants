@@ -1,5 +1,5 @@
 ---
-title: ES6
+title: es6
 ---
 
 # ES6

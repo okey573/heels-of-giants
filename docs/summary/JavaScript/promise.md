@@ -1,5 +1,5 @@
 ---
-title: Promise
+title: promise
 ---
 
 # Promise是什么？

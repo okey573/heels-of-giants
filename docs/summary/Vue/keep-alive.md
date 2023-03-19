@@ -3,7 +3,8 @@ title: keep-alive
 outline: [2,6]
 ---
 
-vue的内置组件[keep-alive](https://cn.vuejs.org/guide/built-ins/keep-alive.html#keepalive)
+
+# [keep-alive](https://cn.vuejs.org/guide/built-ins/keep-alive.html#keepalive)
 
 ## 作用
 

@@ -2,6 +2,8 @@
 title: 原型链
 ---
 
+# 原型链
+
 ## 理解
 
 - Object方法继承了Function

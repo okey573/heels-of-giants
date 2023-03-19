@@ -2,7 +2,9 @@
 title: mvvm
 ---
 
-mvvm是 Model-View-ViewModel 的缩写，即 模型-视图-视图模型
+# mvvm
+
+mvvm 是 Model-View-ViewModel 的缩写，即 模型-视图-视图模型
 
 ## mvvm是什么
 

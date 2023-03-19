@@ -1,5 +1,5 @@
 ---
-title: Deno
+title: deno
 ---
 
 是 **Deno** 不是 **Deno.js**

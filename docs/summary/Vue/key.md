@@ -2,6 +2,8 @@
 title: key
 ---
 
+# key
+
 在vue中使用v-for时需要，都会提示或要求使用: **key** attribute
 
 ## 为什么要有key

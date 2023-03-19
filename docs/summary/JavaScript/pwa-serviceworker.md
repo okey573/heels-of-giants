@@ -1,5 +1,5 @@
 ---
-title: PWA和Service Worker
+title: pwa 和 service worker
 ---
 
 _个人感觉PWA不重要，在国内没什么市场，国内的小程序太多了:ghost:_

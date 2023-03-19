@@ -1,5 +1,5 @@
 ---
-title: XSS
+title: xss
 outline: [2,6]
 ---
 
@@ -24,4 +24,6 @@ Cross-Site Scripting(跨站脚本攻击)，简称XSS(避免和CSS重名)，是�
 - 对用户输入和输出进行过滤，对其中注入的脚本进行转义
 - CSP（内容安全策略）以白名单的机制对网站加载或执行的资源起作用。在网页中，这样的策略通过 HTTP 头信息或者 meta 元素定义。CSP虽然提供了强大的安全保护
 
-[内容安全策略(CSP)详解](https://blog.csdn.net/weixin_47450807/article/details/123224654)
+## 参考链接
+
+- [内容安全策略(CSP)详解](https://blog.csdn.net/weixin_47450807/article/details/123224654)

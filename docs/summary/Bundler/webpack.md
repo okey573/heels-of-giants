@@ -1,5 +1,5 @@
 ---
-title: Webpack
+title: webpack
 outline: [2,6]
 ---
 

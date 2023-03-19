@@ -3,7 +3,7 @@ title: vuex和pinia
 outline: [2,6]
 ---
 
-VUE存储库：vuex和pinia
+# vuex 和 pinia
 
 ## vuex
 

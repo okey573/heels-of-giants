@@ -53,8 +53,6 @@ get 和 post 都是 http 协议的请求方法，它们都是基于 tcp/ip 协�
 
 上面这段话，我晕了，tcp 不是传输层的协议吗，和浏览器有什么关系？
 
-[GET和POST两种基本请求方法的区别](https://www.cnblogs.com/logsharing/p/8448446.html)
-
 ## 简单请求和复杂请求
 
 #### 简单请求
@@ -85,3 +83,7 @@ get 和 post 都是 http 协议的请求方法，它们都是基于 tcp/ip 协�
 - fetch默认不会带cookie，需要添加配置项： fetch(url, {credentials: 'include'})
 - fetch不支持abort，不支持超时控制，使用setTimeout及Promise.reject的实现的超时控制并不能阻止请求过程继续在后台运行，造成了流量的浪费
 - fetch没有办法用原生监测异步请求，而XHR可以
+
+## 参考链接
+
+- [GET和POST两种基本请求方法的区别](https://www.cnblogs.com/logsharing/p/8448446.html)

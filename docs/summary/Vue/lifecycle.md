@@ -1,9 +1,9 @@
 ---
-title: 声明周期
+title: 生命周期
 ---
-vue实例从创建到销毁的过程，具体来说就是vue实例从开始创建、初始化数据、编译模板、挂载Dom、渲染数据、更新数据、最后销毁这样的一个过程
+vue 实例从创建到销毁的过程，具体来说就是 vue 实例从开始创建、初始化数据、编译模板、挂载 Dom、渲染数据、更新数据、最后销毁这样的一个过程
 
-## vue2声明周期
+## vue2 生命周期
 
 1. beforeCreate
 2. created
@@ -19,9 +19,9 @@ vue实例从创建到销毁的过程，具体来说就是vue实例从开始创�
 
 ![生命周期](/images/vue2_lifecycle.png)
 
-## vue3声明周期
+## vue3 生命周期
 
-vue3的声明周期，在使用时，区分选项式和组合式
+vue3 的生命周期，在使用时，区分选项式和组合式
 
 #### 选项式
 
@@ -62,14 +62,14 @@ vue3的声明周期，在使用时，区分选项式和组合式
 
 #### 挂载阶段
 
-父beforeCreate -> 父created -> 父beforeMount -> 子beforeCreate -> 子created -> 子beforeMount -> 子mounted -> 父mounted
+父 beforeCreate -> 父 created -> 父 beforeMount -> 子 beforeCreate -> 子 created -> 子 beforeMount -> 子 mounted -> 父 mounted
 
 #### 更新阶段
 
-父beforeUpdate -> 子beforeUpdate -> 子updated -> 父updated
+父 beforeUpdate -> 子 beforeUpdate -> 子 updated -> 父 updated
 
 #### 销毁阶段
 
-父beforeDestroy -> 子beforeDestroy -> 子destroyed -> 父destroyed
+父 beforeDestroy -> 子 beforeDestroy -> 子 destroyed -> 父 destroyed
 
 规律就是：父组件先开始执行，然后等到子组件执行完，父组件收尾。

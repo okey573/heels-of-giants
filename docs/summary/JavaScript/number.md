@@ -6,6 +6,8 @@ title: number
 - 小数转二进制：整数部分 "除二取余，倒序排列"，小数部分 "乘二取整，顺序排列"
 - 小数部分是无限循环
 
-[参考链接1](https://www.cnblogs.com/shytong/p/5091600.html)
+## 参考链接
 
-[参考链接2](https://juejin.cn/post/6844904148538753038)
+- [0.1 + 0.2 = 0.30000000000000004怎样理解](https://www.cnblogs.com/shytong/p/5091600.html)
+
+- [JS基础 | 浮点数计算原理剖析](https://juejin.cn/post/6844904148538753038)

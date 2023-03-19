@@ -42,9 +42,9 @@ const ctx = cvs.getContext("2d");
 
 利用上面基本形状以及它们的组合，再配合它提供的各种样式设置，就可以完成任意二维图像的绘制。
 
-完整的API：https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#reference
+- [完整的API](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#reference)
 
-中文版：https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D
+- [中文版](https://developer.mozilla.org/zh-CN/docs/Web/API/CanvasRenderingContext2D)
 
 ## requestAnimationFrame
 

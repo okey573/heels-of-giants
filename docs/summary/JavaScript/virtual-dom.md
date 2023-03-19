@@ -1,5 +1,5 @@
 ---
-title: 虚拟dom
+title: 虚拟 dom
 ---
 
 # 虚拟 DOM

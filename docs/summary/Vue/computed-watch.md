@@ -1,8 +1,10 @@
 ---
-title: computed和watch
+title: computed 和 watch
 ---
 
-## computed和watch的区别
+# computed 和 watch
+
+## computed 和 watch 的区别
 
 #### computed
 

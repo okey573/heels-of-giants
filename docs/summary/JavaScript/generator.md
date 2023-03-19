@@ -1,5 +1,5 @@
 ---
-title: Generator
+title: generator
 outline: [2,6]
 ---
 

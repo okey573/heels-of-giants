@@ -2,6 +2,8 @@
 title: 响应式原理
 ---
 
+# 响应式原理
+
 ## 1. initState初始化响应式对象
 
 在 Vue 的初始化阶段，_init 方法执行的时候，会执行 initState(vm) 方法。

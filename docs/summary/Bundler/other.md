@@ -1,5 +1,5 @@
 ---
-title: 其它 Bundler
+title: 其它 bundler
 ---
 
 # 各种各样的 Bundler

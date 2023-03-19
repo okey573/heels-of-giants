@@ -21,10 +21,6 @@ Firefox 目前使用的引擎，前身是 java 编写的 SpiderMonkey
 
 ie 使用的Chakra (JScript引擎)，中文译名为查克拉
 
-### 参考
-
-https://www.wangshaoxing.com/blog/javascript-engines.html
-
 ## 渲染引擎
 
 主流： Gecko、Trident、Webkit、Blink、Chromium
@@ -44,3 +40,7 @@ https://www.wangshaoxing.com/blog/javascript-engines.html
 Edge：EdgeHTML 后来改用 Chromium
 
 ![关系图](/images/render-engine.png)
+
+## 参考链接
+
+- [引擎浅谈 SpiderMonkey & Google V8](https://www.wangshaoxing.com/blog/javascript-engines.html)

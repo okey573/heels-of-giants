@@ -2,9 +2,11 @@
 title: instanceof
 ---
 
+# instanceof 关键字
+
 ## 理解
 
-判断一个function的prototype是否存在于某一个对象的原型链上
+判断一个 function 的 prototype 是否存在于某一个对象的原型链上
 
 - [原型链](/summary/JavaScript/prototype-chain#图解)
 
@@ -36,3 +38,9 @@ console.log(foo1 instanceof Foo === theInstanceof(foo1, Foo))
 console.log(anyObj instanceof Foo === theInstanceof(anyObj, Foo))
 console.log(foo1 instanceof Object === theInstanceof(foo1, Object))
 ```
+
+## 和 `typeof` 的区别
+
+- typeof会返回一个运算数的基本类型，instanceof 返回的是布尔值
+- instanceof 可以准确判断引用数据类型，但是不能正确判断原始数据类型
+- typeof虽然可以判断原始数据类型（null 除外），但是无法判断引用数据类型（function 除外）

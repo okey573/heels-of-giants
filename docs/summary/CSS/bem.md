@@ -1,5 +1,5 @@
 ---
-title: BEM
+title: bem
 ---
 
 # BEM
