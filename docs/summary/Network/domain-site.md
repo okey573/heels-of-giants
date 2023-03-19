@@ -1,9 +1,9 @@
 ---
-title: domain&site
+title: domain & site
 outline: [2,6]
 ---
 
-域和站
+# 域和站
 
 ## 域名是什么
 

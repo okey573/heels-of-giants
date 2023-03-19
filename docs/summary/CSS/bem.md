@@ -2,6 +2,8 @@
 title: BEM
 ---
 
+# BEM
+
 BEM是一种命名规范。或者说是一种class书写方式的方法论（methodology）
 
 BEM是Block（块）、Element（元素）、Modifier（修饰符）的简写

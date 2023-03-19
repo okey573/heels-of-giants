@@ -2,6 +2,8 @@
 title: Web Component
 ---
 
+# Web Component
+
 Web Component是一组api，是一系列加入 w3c 的 HTML 和 DOM 的特性，使得开发者可以创建可复用的组件。由于 web components 是由 w3c 组织去推动的，因此它很有可能在不久的将来成为浏览器的一个标配。
 
 ## 核心

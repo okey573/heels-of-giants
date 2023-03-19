@@ -2,6 +2,8 @@
 title: 模块联邦
 ---
 
+# 模块联邦
+
 模块联邦(Module Federation)是webpack5推出的新特性。vite现在也有[插件](https://github.com/originjs/vite-plugin-federation)支持。也是微前端的一种解决方案。
 
 ## 解释
