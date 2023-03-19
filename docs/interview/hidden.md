@@ -1,5 +1,6 @@
 ---
-title: 隐藏的
+title: Q & A
+hidden: true
 ---
 
 ## 简历中所说的 cli 是什么
@@ -64,5 +65,93 @@ blink 目前的区别：
 1. 跨进程的 iframe(out-of-process iframes)：为 iframes 内容创建单独的沙箱进程来渲染它们
 
 2. 将 DOM 移入 JavaScript 中，这样 JavaScript 可以更快的访问 DOM
+</p>
+</details>
+
+## 工作中比较有成就感的事情
+
+<details>
+<summary><b>答案</b></summary>
+<p>
+
+- 小程序（微信生态）
+- 后端接口的缓存器（Redis实现）
+- 参与后端接口优化（数据库层面）
+- 升级 vue 版本，并制定相关规范， 搭建文档中心
+- vite(create-vue) 还是 webpack(vue-cli) 打包 sdk
+- 自定义 bpmn-js 的属性控制面板
+
+</p>
+</details>
+
+## 优化
+
+<details>
+<summary><b>答案</b></summary>
+<p>
+
+有用户体验方面的优化：
+
+- v-lazy指令
+- script的refer async 属性
+- gzip缓存，浏览器缓存等等
+- 虚拟列表
+
+有从编码规范带来的优化
+
+- v8的快慢属性
+
+也有提升开发效率的优化：
+
+- 开发cli工具，给团队赋能
+- 开发同步cookie插件，提升开发效率
+- 打包速度等等，使用 HappyPack ParallelUglifyPlugin 等插件
+
+</p>
+</details>
+
+## 遇到了哪些问题，如何解决？
+
+<details>
+<summary><b>答案</b></summary>
+<p>
+
+- NodeJS 环境中怎么获取某个npm包的最新版本？
+
+  使用 fetch 查询 cdn 中的 packge.json 文件
+
+- BPMN 自定义属性操作面板
+
+  翻源码，用 react jsx， 模拟实现一个 plugin
+
+- 开发 create-app 原本使用esm + esBuild 打包的架构，但是 esBuild 不能解析 `import.meta.url`
+
+  还是改成了使用CommonJS
+
+- cli 中判断 sdk 的版本实际只需要读取一个version文件就行，怎么避免把整个 repo clone 下来
+
+  `git archive` 导出指定目录 zip 格式，然后解压
+
+  ```javascript
+  execute(`git archive -o ${tempZipSdkDir} --remote "${repo}" "${branch}" "${latestSdkPath}"`)
+  await compressing.zip.uncompress(tempZipSdkDir, tempSdkDir)
+  ```
+
+</p>
+</details>
+
+## 最近新学到的内容？
+
+<details>
+<summary><b>答案</b></summary>
+<p>
+
+- scroll snap
+- fast-glob
+- Deno
+- vmin
+- 字符串的码点和码元
+- WebContainer
+
 </p>
 </details>
