@@ -3,7 +3,7 @@ title: cookie 和 web storage
 outline: [2,6]
 ---
 
-Cookie SessionStorage LocalStorage
+# Cookie SessionStorage LocalStorage
 
 ## Cookie
 
@@ -49,7 +49,6 @@ SameSite属性可以设置三个值：Strict、Lax、None
 SameParty的cookie是配合First-Party Sets的使用，First-Party Sets的配置是托管在`/.well-known/first-party-set`路由下，members和owner都要配置
 
 配置完成后，设置了SameParty属性的就能使用了
-
 
 ## Web Storage
 

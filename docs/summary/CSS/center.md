@@ -3,6 +3,8 @@ title: 居中
 outline: [2,6]
 ---
 
+# 居中的实现方式
+
 公共css：
 
 ```css

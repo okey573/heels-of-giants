@@ -3,7 +3,7 @@ title: webpack
 outline: [2,6]
 ---
 
-# Webpack
+# [Webpack](https://webpack.docschina.org/)
 
 ## 打包流程
 

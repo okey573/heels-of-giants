@@ -1,7 +1,10 @@
 ---
 title: 组件通信
 ---
-实现组件间通信的方式
+
+# 组件通信
+
+## 实现组件间通信的方式
 
 - props/$emit
 - $parent/$children

@@ -2,6 +2,8 @@
 title: call apply bind
 ---
 
+# call apply bind
+
 _本文重点在[实现bind](/summary/JavaScript/call-apply-bind#实现bind)_
 
 ## 实现call
