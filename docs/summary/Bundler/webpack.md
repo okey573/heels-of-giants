@@ -21,8 +21,6 @@ outline: [2,6]
 
 TODO
 
-[参考链接](https://juejin.cn/post/6844904008432222215)
-
 ## loader
 
 webpack 只能理解 JavaScript 和 JSON 文件，这是 webpack 开箱可用的自带能力。loader 让 webpack 能够去处理其他类型的文件，并将它们转换为有效 模块，以供应用程序使用，以及被添加到依赖图中。
@@ -272,4 +270,10 @@ module.exports = FileListPlugin;
 
 ## 优化
 
-DllPlugin HappyPack ParallelUglifyPlugin [参考链接](https://www.jianshu.com/p/2487e3c5421e)
+DllPlugin HappyPack ParallelUglifyPlugin
+
+## 参考链接
+
+- [Webpack构建优化—使用DllPlugin、HappyPack、ParallelUglifyPlugin](https://www.jianshu.com/p/2487e3c5421e)
+
+- [轻松理解webpack热更新原理](https://juejin.cn/post/6844904008432222215)
