@@ -45,6 +45,7 @@ function getItems (module) {
 function translateGroup (group) {
   return ({
     'Algorithm-DataStructure': '算法和数据结构',
+    'Browser': '浏览器',
     'Engineered': '工程化',
     'NetWork': '网络',
     'Other': '其他',

@@ -1,5 +1,5 @@
 ---
-title: 浏览器缓存
+title: 缓存
 outline: [2,6]
 ---
 
@@ -58,13 +58,15 @@ Expires 是 Http/1.0 规定的响应头，它的含义就是代表该资源在�
 
 服务器可以通过某种自定的算法对资源生成一个唯一的标识(比如md5标识)，然后在浏览器第一次请求某一个URL时把这个标识放到响应头传到浏览器，浏览器会把这个ETag的值存起来，服务器端的返回状态会是200。
 
-以后如果浏览器要再发送该请求，会在request header 中加上If-None-Match（具体格式看下图）, 而该请求头的值就是上一次存的ETag的值，用以发送给服务端来验证资源有没有修改。
+以后如果浏览器要再发送该请求，会在request header 中加上If-None-Match, 而该请求头的值就是上一次存的ETag的值，用以发送给服务端来验证资源有没有修改。
 
 Get请求中，当且仅当服务器上没有任何资源的ETag属性值与这个首部中列出的相匹配的时候，服务器端会才返回所请求的资源，响应码为200。
 
 如果有资源的ETag值相匹配，那么返回304状态码。浏览器就会从缓存中获取该请求资源，从而达到节省开销加快用户访问速度的目的
 
 ###### Last-Modified 和 If-Modified-Since
+
+响应头中会加上 Last-Modified 表示上次修改时间，下次再发起相同请求时，将会在请求头上携带If-Modified-Since，这个值就是之前获取到的Last-Modified
 
 当Response Header中没有ETag，Cache-Control，Expires，Pragma这类缓存相关字段，只有Last-Modified，浏览器也会缓存，理论上，应该会在下一次请求中带上If-Modified-Since的请求头，去服务端验证资源是否过期，过期就响应码就为200并返回相应的资源，没过期响应码就是304，浏览器会从缓存中获取资源。
 
@@ -75,3 +77,7 @@ _Last-Modified 和 If-Modified-Since 的值都是时间_
 #### 优先级
 
 强缓存优先级高于协商缓存
+
+## 参考链接
+
+- [浏览器http请求缓存，cache-control是服务器设置，还是浏览器设置](https://blog.csdn.net/qq_17335549/article/details/128630153)
