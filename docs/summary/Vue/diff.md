@@ -1,5 +1,5 @@
 ---
-title: diff算法
+title: diff 算法
 outline: [2,6]
 ---
 

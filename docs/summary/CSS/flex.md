@@ -1,5 +1,5 @@
 ---
-title: flex布局
+title: flex 布局
 ---
 
 _阮一峰YYDS_

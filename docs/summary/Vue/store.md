@@ -1,5 +1,5 @@
 ---
-title: vuex和pinia
+title: vuex 和 pinia
 outline: [2,6]
 ---
 

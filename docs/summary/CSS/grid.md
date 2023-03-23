@@ -1,5 +1,5 @@
 ---
-title: grid布局
+title: grid 布局
 ---
 
 _阮一峰YYDS_
