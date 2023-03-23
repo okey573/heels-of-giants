@@ -1,10 +1,10 @@
 ---
-title: 虚拟 dom
+title: virtual dom
 ---
 
-# 虚拟 DOM
+# virtual DOM
 
-## 什么是虚拟DOM
+## 什么是 virtual DOM
 
 Virtual DOM是对真实 DOM 的抽象,本质上是 JavaScript 对象,这个对象就是更加轻量级的对 DOM 的描述.
 
