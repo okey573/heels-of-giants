@@ -155,3 +155,17 @@ blink 目前的区别：
 
 </p>
 </details>
+
+## 对前端的看法？
+
+<details>
+<summary><b>答案</b></summary>
+<p>
+
+- deno 做 Python 的工作
+- 浏览器自己实现虚拟 dom
+- WebComponent 抹平框架间的差异
+- 前端页面就那么多东西，总要做点其他的
+
+</p>
+</details>
