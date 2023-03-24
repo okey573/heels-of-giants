@@ -39,8 +39,9 @@ console.log(anyObj instanceof Foo === theInstanceof(anyObj, Foo))
 console.log(foo1 instanceof Object === theInstanceof(foo1, Object))
 ```
 
-## 和 `typeof` 的区别
+## 和 `typeof` `toString` 的区别
 
-- typeof会返回一个运算数的基本类型，instanceof 返回的是布尔值
+- typeof 会返回一个运算数的基本类型，也就是 number string boolean bigint 那些基本类型；instanceof 返回的是布尔值
 - instanceof 可以准确判断引用数据类型，但是不能正确判断原始数据类型
 - typeof虽然可以判断原始数据类型（null 除外），但是无法判断引用数据类型（function 除外）
+- Object.prototype.toString.call() 返回的是对应的构造函数
