@@ -8,4 +8,4 @@ V8引擎的数组索引属性、命名属性、对象内属性、隐藏类、描
 
 ## 参考链接
 
-[V8中的快慢属性](https://www.cnblogs.com/all-smile/p/16597681.html)
+- [V8中的快慢属性](https://www.cnblogs.com/all-smile/p/16597681.html)

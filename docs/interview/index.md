@@ -167,3 +167,40 @@ function nextPermutation(nums: number[]): void {
 
 </p>
 </details>
+
+## js 基础类
+
+#### 执行上下文相关
+
+<details>
+<summary><b>题目</b></summary>
+<p>
+
+```javascript
+var b = 10;
+(function b () {
+  b = 20
+  console.log(b)
+})()
+```
+
+</p>
+</details>
+
+<details>
+<summary><b>答案</b></summary>
+<p>
+
+严格模式下会报错
+
+非严格模式下会打印 `b` 这个 function
+
+**解析：**
+
+- IIFE 中有独立作用域
+- 函数表达式标识符不可被修改（所以在 IIFE 中，给 b 赋值会报错，因为 b 已经是一个 function 了）
+
+[**在JavaScript的立即执行的具名函数A内修改A的值时到底发生了什么？**](https://segmentfault.com/q/1010000002810093)
+
+</p>
+</details>

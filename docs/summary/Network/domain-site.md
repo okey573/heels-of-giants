@@ -50,4 +50,5 @@ eTLD+1相同 + 协议相同
 
 
 ## 参考链接
-https://cloud.tencent.com/developer/article/2134072
+
+- [浏览器原理之跨域？跨站？你真的不懂我！](https://cloud.tencent.com/developer/article/2134072)

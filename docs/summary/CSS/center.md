@@ -203,4 +203,4 @@ PC端无兼容性要求，推荐flex
 
 ## 参考链接
 
-_[参考文章](https://yanhaijing.com/css/2018/01/17/horizontal-vertical-center/)_
+- [参考文章](https://yanhaijing.com/css/2018/01/17/horizontal-vertical-center/)

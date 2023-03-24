@@ -114,4 +114,5 @@ foo3()
 ## 参考链接
 
 - [ES2018 最新 【译】理解Javascript中的执行上下文和执行栈](https://juejin.cn/post/7129510217863299102)
+
 - [变量对象、活动对象](https://blog.csdn.net/sonicwater/article/details/112350423)

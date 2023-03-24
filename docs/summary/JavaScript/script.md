@@ -109,6 +109,28 @@ async 的优先级比 defer 高，也就是如果同时存在这 2 个属性，�
 
 这个布尔属性被设置来标明这个脚本在支持 ES2015 modules 的浏览器中不执行。 — 实际上，这可用于在不支持模块化 JavaScript 的旧浏览器中提供回退脚本
 
+## type=importmap
+
+```html
+
+<script type="importmap">
+{
+  "imports": {
+    "dayjs": "https://cdn.skypack.dev/dayjs@1.10.7",
+  }
+}
+
+
+</script>
+<script type="module">
+    import dayjs from 'dayjs';
+
+    console.log(dayjs('2019-01-25').format('YYYY-MM-DDTHH:mm:ssZ[Z]'));
+</script>
+```
+
 ## 参考链接
 
 - [script](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/script)
+
+- [type=“module“ 你了解，但 type=“importmap“ 你知道吗](https://blog.csdn.net/qq449245884/article/details/126133582)
