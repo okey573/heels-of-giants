@@ -5,7 +5,7 @@ outline: [2,6]
 
 # http
 
-**http** 协议是一个[应用层](/summary/Network/01#_1-应用层)协议
+**http** 协议是一个[应用层](/summary/network/01#_1-应用层)协议
 
 ## http 1.0
 
