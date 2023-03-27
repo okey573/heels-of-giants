@@ -51,7 +51,7 @@ function translateGroup (group) {
     'engineered': '工程化',
     'js': 'JavaScript',
     'network': '网络',
-    'nodejs': 'NodeJs',
+    'nodejs': 'NodeJS',
     'other': '其他',
     'pattern': '设计模式',
     'react': 'React',
