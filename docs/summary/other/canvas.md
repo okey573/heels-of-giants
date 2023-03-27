@@ -52,7 +52,7 @@ const ctx = cvs.getContext("2d");
 
 requestAnimationFrame的用法与settimeout很相似，只是不需要设置时间间隔而已。requestAnimationFrame使用一个回调函数作为参数，这个回调函数会在浏览器重绘之前调用。它返回一个整数，表示定时器的编号，这个值可以传递给cancelAnimationFrame用于取消这个函数的执行
 
-#### requestAnimationFrame特点
+#### requestAnimationFrame 特点
 
 【1】requestAnimationFrame会把每一帧中的所有DOM操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，如果系统绘制率是 60Hz，那么回调函数就会16.7ms再 被执行一次，如果绘制频率是75Hz，那么这个间隔时间就变成了 1000/75=13.3ms。换句话说就是，requestAnimationFrame的执行步伐跟着系统的绘制频率走。它能保证回调函数在屏幕每一次的绘制间隔中只被执行一次，这样就不会引起丢帧现象，也不会导致动画出现卡顿的问题。
 
@@ -60,7 +60,7 @@ requestAnimationFrame的用法与settimeout很相似，只是不需要设置时�
 
 【3】requestAnimationFrame是由浏览器专门为动画提供的API，在运行时浏览器会自动优化方法的调用，并且如果页面不是激活状态下的话，动画会自动暂停，有效节省了CPU开销
 
-#### 跟setTimeout和setInterva的对比
+#### 跟 setTimeout 和 setInterval 的对比
 
 setTimeout和setInterval的问题是，它们都不精确。它们的内在运行机制决定了时间间隔，参数实际上只是指定了把动画代码添加到浏览器UI线程队列中以等待执行的时间。如果队列前面已经加入了其他任务，那动画代码就要等前面的任务完成后再执行
 
@@ -74,7 +74,7 @@ requestAnimationFrame采用系统时间间隔，保持最佳绘制效率，不�
 - 动画
 
 <script setup>
-import TheCanvas1 from './components/TheCanvas1.vue'
+import TheCanvas1 from './components/TheCanvas1.vue';
 import TheCanvas2 from './components/TheCanvas2.vue'
 </script>
 
