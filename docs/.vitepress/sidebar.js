@@ -44,15 +44,19 @@ function getItems (module) {
 
 function translateGroup (group) {
   return ({
-    'Algorithm-DataStructure': '算法和数据结构',
-    'Browser': '浏览器',
-    'Engineered': '工程化',
-    'NetWork': '网络',
-    'Other': '其他',
-    'Pattern': '设计模式',
-    'Security': '安全',
+    'algorithm': '算法和数据结构',
+    'browser': '浏览器',
+    'bundler': '构建工具',
+    'css': 'CSS',
+    'engineered': '工程化',
     'js': 'JavaScript',
+    'network': '网络',
     'nodejs': 'NodeJs',
-    'Bundler': '构建工具'
+    'other': '其他',
+    'pattern': '设计模式',
+    'react': 'React',
+    'security': '安全',
+    'ts': 'TypeScript',
+    'vue': 'Vue'
   })[group] || group
 }

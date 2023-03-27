@@ -2,4 +2,4 @@
 title: vue 的 nextTick
 ---
 
-# [nextTick](/summary/JavaScript/event-loop.html#vue的nexttick)
+# [nextTick](/summary/js/event-loop.html#vue的nexttick)
