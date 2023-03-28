@@ -112,16 +112,14 @@ async 的优先级比 defer 高，也就是如果同时存在这 2 个属性，�
 ## type=importmap
 
 ```html
-
 <script type="importmap">
 {
   "imports": {
     "dayjs": "https://cdn.skypack.dev/dayjs@1.10.7",
   }
 }
-
-
 </script>
+
 <script type="module">
     import dayjs from 'dayjs';
 

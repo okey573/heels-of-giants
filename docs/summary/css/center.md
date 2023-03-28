@@ -120,7 +120,7 @@ html:
 
 - ###### line-height
 
-把box设置为行内元素，通过text-align就可以做到水平居中，但很多同学可能不知道通过通过vertical-align也可以在垂直方向做到居中，代码如下
+把box设置为行内元素，通过text-align就可以做到水平居中，通过vertical-align也可以在垂直方向做到居中，代码如下
 
 ```css
 .wp {

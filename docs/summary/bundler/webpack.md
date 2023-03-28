@@ -9,9 +9,9 @@ outline: [2,6]
 
 - 将命令行参数与 webpack 配置文件 合并、解析得到参数对象。
 - 参数对象传给 webpack 执行得到 Compiler 对象。
-- 执行 Compiler 的 run方法开始编译。每次执行 run 编译都会生成一个 Compilation 对象。
-- 触发 Compiler 的 make方法分析入口文件，调用 compilation 的 buildModule 方法创建主模块对象。
-- 生成入口文件 AST(抽象语法树)，通过 AST 分析和递归加载依赖模块。
+- 执行 Compiler 的 run 方法开始编译。每次执行 run 编译都会生成一个 Compilation 对象。
+- 触发 Compiler 的 make 方法分析入口文件，调用 compilation 的 buildModule 方法创建主模块对象。
+- 生成入口文件 AST (抽象语法树)，通过 AST 分析和递归加载依赖模块。
 - 所有模块分析完成后，执行 compilation 的 seal 方法对每个 chunk 进行整理、优化、封装。
 - 最后执行 Compiler 的 emitAssets 方法把生成的文件输出到 output 的目录中。
 
@@ -23,7 +23,7 @@ TODO
 
 ## loader
 
-webpack 只能理解 JavaScript 和 JSON 文件，这是 webpack 开箱可用的自带能力。loader 让 webpack 能够去处理其他类型的文件，并将它们转换为有效 模块，以供应用程序使用，以及被添加到依赖图中。
+webpack 只能理解 JavaScript 和 JSON 文件，这是 webpack 开箱可用的自带能力。loader 让 webpack 能够去处理其他类型的文件，并将它们转换为有效模块，以供应用程序使用，以及被添加到依赖图中。
 
 #### 特性
 

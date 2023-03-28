@@ -8,7 +8,6 @@ title: url 到页面显示
 
 ![流程](/images/url-to-display.png)
 
-
 ## 1. 浏览器预处理
 
 1. 浏览器判断输入的内容是否符合 URL 规则，否则当做搜索内容处理。
