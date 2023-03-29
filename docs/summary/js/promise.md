@@ -40,7 +40,74 @@ https://promisesaplus.com/
 
 ## 实现Promise
 
-_coming soon..._
+_TODO 实现 Promise 类_
+
+### 实现 Promise.all
+
+```javascript
+function theAll (promises) {
+  let count = 0
+  const vals = new Array(promises.length)
+  return new Promise((resolve, reject) => {
+    for (let i = 0; i < promises.length; i++) {
+      Promise.resolve(promises[i]).then((resp) => {
+        vals[i] = resp
+        count++
+        if (count === promises.length) {
+          resolve[vals]
+        }
+      }, (err) => {
+        reject(err)
+        return
+      })
+    }
+  })
+}
+```
+
+### 实现 Promise.race
+
+```javascript
+function theRace (promises) {
+  return new Promise((resolve, reject) => {
+    promises.forEach(p => {
+      Promise.resolve(p).then(resolve, reject)
+    })
+  })
+}
+```
+
+### 实现 Promise.allSettled
+
+```javascript
+function theAllSettled (promises) {
+  let count = 0
+  const vals = new Array(promises.length)
+  return new Promise((resolve, reject) => {
+    for (let i = 0; i < promises.length; i++) {
+      Promise.resolve(promises[i]).then((resp) => {
+        vals[i] = {
+          satus: 'fulfilled',
+          value: resp
+        }
+        count++
+        if (count === promises.length) {
+          resolve[vals]
+        }
+      }, (err) => {
+        vals[i] = {
+          satus: 'rejected',
+          value: err
+        }
+        count++
+        if (count === promises.length) {
+          resolve[vals]
+        }
+      })
+    }
+  })
+}
+```
 
 ## Promise then 第二个参数和 catch 的区别
 
