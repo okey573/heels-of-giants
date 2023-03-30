@@ -72,5 +72,34 @@ publisher.addObserver(observer1)
 publisher.addObserver(observer2)
 
 // 发布订阅
-publisher.setState({name: '小绿'})
+publisher.setState({ name: '小绿' })
+```
+
+## Proxy 和 Reflect 实现
+
+```javascript
+const observedQueue = []
+
+const observe = (fn) => {
+  observedQueue.push(fn)
+}
+
+const observable = (obj) => {
+  return new Proxy(obj, {
+    set (target, ...args) {
+      const res = Reflect.set(target, ...args)
+      observedQueue.forEach(fn => fn(target))
+      return res
+    }
+  })
+}
+
+const observedInstance = observable({
+  name: 'abc'
+})
+
+observe(console.log)
+
+observedInstance.name = '123'
+observedInstance.age = 108
 ```
