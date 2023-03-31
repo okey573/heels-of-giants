@@ -84,6 +84,14 @@ get 和 post 都是 http 协议的请求方法，它们都是基于 tcp/ip 协�
 - fetch不支持abort，不支持超时控制，使用setTimeout及Promise.reject的实现的超时控制并不能阻止请求过程继续在后台运行，造成了流量的浪费
 - fetch没有办法用原生监测异步请求，而XHR可以
 
+## AbortController
+
+AbortController 接口表示一个控制器对象，允许你根据需要中止一个或多个 Web 请求。可以使用AbortController.AbortController()构造函数创建一个新的 AbortController 。使用AbortSignal对象可以完成与 DOM 请求的通信。
+
+fetch 可以使用 AbortController 来终止请求
+
+xhr 对象也有 abort 方法
+
 ## 参考链接
 
 - [GET和POST两种基本请求方法的区别](https://www.cnblogs.com/logsharing/p/8448446.html)

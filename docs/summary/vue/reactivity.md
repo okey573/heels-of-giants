@@ -76,3 +76,7 @@ Proxy 更加便捷
   - apply
   - construct
 - 但是兼容性比defineProperty差，基本不支持ie。而且没有一个完美的 Polyfill
+
+#### 惰性响应式
+
+vue3 的响应式还是惰性响应式的，不会像 vue2 一样在初始化的时候就递归处理深层响应式对象， vue3 是在 get 函数中处理响应式。其中用了 weakMap 对象，做缓存区，避免重复代理的问题 

@@ -70,3 +70,9 @@ event.preventDefault();
 ```javascript
 event.stopPropagation();
 ```
+
+
+## currentTarget 和 target
+
+- target：触发事件的元素
+- currentTarget：事件绑定的元素
