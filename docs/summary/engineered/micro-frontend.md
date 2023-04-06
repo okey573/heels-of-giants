@@ -57,8 +57,14 @@ JavaScript隔离：每当微应用的JavaScript被加载并运行时，它的核
 
 应用间通信有很多种方式，当然，要让多个分离的微应用之间要做到通信，本质上仍离不开中间媒介或者说全局对象。所以对于消息订阅（pub/sub）模式的通信机制是非常适用的，在基座应用中会定义事件中心Event，每个微应用分别来注册事件，当被触发事件时再有事件中心统一分发，这就构成了基本的通信机制
 
-## 微前端的框架
+## 参考链接
 
 - [17个可以实现微前端的方案](https://www.jianshu.com/p/0ac8e1a666cf)
+
 - [微前端-最容易看懂的微前端知识](https://www.jianshu.com/p/5576598993c6)
+
 - [什么是微前端](https://blog.csdn.net/huangpb123/article/details/123215785)
+
+- [Qiankun 原理-js沙箱是怎么做隔离的](https://zhuanlan.zhihu.com/p/578093950)
+
+- [Qiankun实践——实现一个CSS沙箱](https://juejin.cn/post/7153140440777097224#heading-5)
