@@ -1,7 +1,7 @@
 import sidebar from './sidebar'
 import nav from './nav'
 
-module.exports = {
+export default {
   title: '巨人之踵',
   base: '/docs',
   head: [
