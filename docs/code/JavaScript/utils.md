@@ -86,3 +86,20 @@ const createArray = (length, obj) => {
   // return Array.from(Array(length), item => obj)
 }
 ```
+
+## badge log
+
+```javascript
+function badgeLog (leftText, rightText, leftColor = '#606060', rightColor = '#1475b2') {
+  console.log(`%c ${leftText} %c ${rightText} `, `padding: 1px; border-radius: 3px 0 0 3px; color: #fff; background: ${leftColor};`, `padding: 1px; border-radius: 0 3px 3px 0; color: #fff; background: ${rightColor};`)
+}
+```
+
+## timer log
+
+```javascript
+const id = 'id'
+console.time(id)
+// do something
+console.timeEnd(id)
+```

@@ -8,3 +8,5 @@ title: TODO LIST
 - 消除异步传染性 （Suspense）
 - webGL
 - webGPU
+- electron 和 tauri
+- rust
