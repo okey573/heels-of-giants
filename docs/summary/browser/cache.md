@@ -72,3 +72,9 @@ localStorage的生命周期是永久的，关闭页面或浏览器之后localSto
 - cookie数据始终在同源的http请求中携带（即使不需要），即cookie在浏览器和服务器间来回传递，而sessionStorage和localStorage不会自动把数据发送给服务器，仅在本地保存
 - 存储大小限制也不同，cookie数据不能超过4K，同时因为每次http请求都会携带cookie、所以cookie只适合保存很小的数据，如会话标识。sessionStorage和localStorage虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。
 - 作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面；localstorage在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的。
+
+## 参考链接
+
+- [CSRF 漏洞的末日？关于 Cookie SameSite 那些你不得不知道的事](https://zhuanlan.zhihu.com/p/137408482)
+
+- [这一次带你彻底了解Cookie](https://zhuanlan.zhihu.com/p/31852168)
