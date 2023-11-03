@@ -42,6 +42,10 @@ function getItems (module) {
   return result
 }
 
+function toUpperCamelCase (str) {
+  return str.split(/[\s-_]+/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')
+}
+
 function translateGroup (group) {
   return ({
     'algorithm': '算法和数据结构',
@@ -58,5 +62,5 @@ function translateGroup (group) {
     'security': '安全',
     'ts': 'TypeScript',
     'vue': 'Vue'
-  })[group] || group
+  })[group] || toUpperCamelCase(group)
 }
