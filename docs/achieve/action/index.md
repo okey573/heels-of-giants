@@ -76,3 +76,4 @@ jobs:
 - token 就是github的token，怎么生成的可以参考[官方文档](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 - repository-name 要推送到哪个Repo，就是github的Repo的完整路径（例如`https://github.com/okey573/okey573.github.io`）`https://github.com/`后面的部分（也就是`okey573/okey573.github.io`）。
 - target-folder就是要推送目标Repo的哪个目录
+- ${{}} 包裹的都是变量，比如secrets.personal_access_token，其实就是获取的github repo设置的参数[github secrets](/achieve/algolia/#github-secrets)。而这个参数值是在 github个人账号settings->developer settings->Personal access tokens->Fine-grained tokens 中生成的

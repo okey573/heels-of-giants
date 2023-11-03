@@ -37,7 +37,9 @@ algolia实现搜索就是通过把网站数据上传到algolia（实际上是alg
 }
 ```
 
-#### 把上面获取到的私钥放在Github Secrets中
+#### Github Secrets
+
+把上面获取到的私钥放在Github Secrets中
 
 > github->setting->Security->secrets and variables->Actions
 
