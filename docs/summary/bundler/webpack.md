@@ -277,3 +277,5 @@ DllPlugin HappyPack ParallelUglifyPlugin
 - [Webpack构建优化—使用DllPlugin、HappyPack、ParallelUglifyPlugin](https://www.jianshu.com/p/2487e3c5421e)
 
 - [轻松理解webpack热更新原理](https://juejin.cn/post/6844904008432222215)
+
+- [webpack打包产物解析及原理（含cjs/esm/代码分离/懒加载](https://juejin.cn/post/7053998924071174175)
