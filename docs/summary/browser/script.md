@@ -70,7 +70,7 @@ async 特性仅适用于外部脚本，如果 script 脚本没有 src，则会�
 
 ## async 和 defer 总结
 
-#### async
+#### defer
 
 - 不阻塞浏览器解析 HTML，等解析完 HTML 之后，才会执行 script。
 - 会并行下载 JavaScript 资源。

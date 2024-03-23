@@ -11,7 +11,6 @@ title: rel 属性
 基本使用
 
 ```html
-
 <head>
     <link rel="preload" as="script" href="foo.js">
 </head>

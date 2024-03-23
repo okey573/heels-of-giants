@@ -37,7 +37,7 @@ outline: [2,6]
 
 #### 强缓存
 
-- 定义：彻底缓存就是浏览器直接读取缓存，不发出任何请求，性能提升最大
+- 定义：强缓存就是浏览器直接读取缓存，不发出任何请求，性能提升最大
 - 表现：强缓存命中时，返回的http状态为200，在Google浏览器的开发者工具的Network里面的size会显示memory cache
 
 ###### cache-control
@@ -81,3 +81,5 @@ _Last-Modified 和 If-Modified-Since 的值都是时间_
 ## 参考链接
 
 - [浏览器http请求缓存，cache-control是服务器设置，还是浏览器设置](https://blog.csdn.net/qq_17335549/article/details/128630153)
+
+- [深入理解浏览器的缓存机制之协商缓存与强缓存](https://blog.csdn.net/sunyctf/article/details/129865320)
