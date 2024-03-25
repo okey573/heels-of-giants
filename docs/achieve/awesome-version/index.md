@@ -1,9 +1,9 @@
 ---
-title: 灵活控制SPA版本的vite插件
+title: 实现灵活控制SPA版本的vite插件
 outline: [ 2,6 ]
 ---
 
-# 灵活控制SPA版本的vite插件
+# 实现灵活控制SPA版本的vite插件
 
 ## 解决的问题
 
