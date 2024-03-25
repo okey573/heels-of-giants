@@ -24,6 +24,12 @@ export default {
       placeholder: '请输入关键词',
       buttonText: '搜索'
     }
+  },
+  vite: {
+    server: {
+      host: true,
+      open: true
+    }
   }
 }
 
