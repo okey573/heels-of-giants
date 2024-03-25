@@ -24,7 +24,7 @@ title: 实现在vue中用decorator处理函数
  *   ...
  * }
  *
- * @author 旷锐锋
+ * @author okey
  * @date 2020/01/15 09:20
  * @param wait 等待时间
  */
@@ -54,7 +54,7 @@ export function debounce (wait = 500) {
  *   ...
  * }
  *
- * @author 旷锐锋
+ * @author okey
  * @date 2020/01/15 09:20
  */
 export function once (target, name, descriptor) {
@@ -82,7 +82,7 @@ export function once (target, name, descriptor) {
  *   ...
  * }
  *
- * @author 旷锐锋
+ * @author okey
  * @date 2020/01/15 09:20
  */
 export function log (target, name, descriptor) {
@@ -111,7 +111,7 @@ export function log (target, name, descriptor) {
  *   ...
  * }
  *
- * @author 旷锐锋
+ * @author okey
  * @date 2020/01/15 09:20
  * @param title 对话框title
  * @param content 对话框content
