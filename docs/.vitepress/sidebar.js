@@ -34,7 +34,7 @@ function getItems (module) {
     } else {
       result.push({
         text: groupZh,
-        collapsible: true,
+        collapsed: true,
         items: [item]
       })
     }
