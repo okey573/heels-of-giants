@@ -10,7 +10,10 @@ hero:
     alt: okey573 docs
   actions:
     - theme: brand
-      text: Do the Rest
+      text: Summary
+      link: /summary/
+    - theme: alt
+      text: TODOS
       link: /todo/
     - theme: alt
       text: View on GitHub
