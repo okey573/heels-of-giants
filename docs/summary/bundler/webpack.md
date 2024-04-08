@@ -7,13 +7,13 @@ outline: [2,6]
 
 ## 打包流程
 
-- 将命令行参数与 webpack 配置文件 合并、解析得到参数对象。
-- 参数对象传给 webpack 执行得到 Compiler 对象。
-- 执行 Compiler 的 run 方法开始编译。每次执行 run 编译都会生成一个 Compilation 对象。
-- 触发 Compiler 的 make 方法分析入口文件，调用 compilation 的 buildModule 方法创建主模块对象。
-- 生成入口文件 AST (抽象语法树)，通过 AST 分析和递归加载依赖模块。
-- 所有模块分析完成后，执行 compilation 的 seal 方法对每个 chunk 进行整理、优化、封装。
-- 最后执行 Compiler 的 emitAssets 方法把生成的文件输出到 output 的目录中。
+- `初始化参数`： 将命令行参数与 webpack 配置文件 合并、解析得到参数对象。
+- `开始编译`： 将上一步得到的参数对象传给 webpack 执行得到 Compiler 对象，加载所有配置的插件，执行对象的 run 方法开始执行编译。每次执行 run 编译都会生成一个 Compilation 对象。
+- `确定入口`： 根据配置中的 entry 找出所有的入口文件
+- `编译模块`： 触发 Compiler 的 make 方法分析入口文件，调用 compilation 的 buildModule 方法创建主模块对象。生成入口文件 AST (抽象语法树)，通过 AST 分析和递归加载依赖模块，调用所有配置的 Loader 对模块进行翻译，再找出该模块依赖的模块。
+- `完成模块编译`： 在经过第4步使用 Loader 翻译完所有模块后，得到了每个模块被翻译后的最终内容以及它们之间的依赖关系。
+- `输出资源`： 执行 compilation 的 seal 方法对每个 chunk 进行整理、优化、封装。根据入口和模块之间的依赖关系，组装成一个个包含多个模块的 Chunk，再把每个 Chunk 转换成一个单独的文件加入到输出列表，这步是可以修改输出内容的最后机会。
+- `输出完成`： 最后执行 Compiler 的 emitAssets 方法把生成的文件输出到 output 的目录中。
 
 ![流程图](/images/webpack-basic-flow.png)
 
@@ -272,6 +272,46 @@ module.exports = FileListPlugin;
 
 DllPlugin HappyPack ParallelUglifyPlugin
 
+## 面试题
+
+#### 常见的 loader 和 plugin
+
+::: details 答案
+
+[loaders](https://webpack.docschina.org/loaders/)
+
+[plugins](https://webpack.docschina.org/plugins/)
+
+:::
+
+#### loader 和 plugin 的区别
+
+::: details 答案
+
+Loader 本质就是一个函数，在该函数中对接收到的内容进行转换，返回转换后的结果。
+
+因为 Webpack 只认识 JavaScript，所以 Loader 就成了翻译官，对其他类型的资源进行转译的预处理工作。
+
+Plugin 就是插件，基于事件流框架 Tapable，插件可以扩展 Webpack 的功能，在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。
+
+Loader 在 module.rules 中配置，作为模块的解析规则，类型为数组。每一项都是一个 Object，内部包含了 test(类型文件)、loader、options (参数)等属性。
+
+Plugin 在 plugins 中单独配置，类型为数组，每一项是一个 Plugin 的实例，参数都通过构造函数传入。
+
+:::
+
+#### Compiler 和 Compilation 的区别
+
+::: details 答案
+
+webpack 打包离不开 Compiler 和 Compilation,它们两个分工明确，理解它们是我们理清 webpack 构建流程重要的一步。
+
+Compiler 负责监听文件和启动编译 它可以读取到 webpack 的 config 信息，整个 Webpack 从启动到关闭的生命周期，一般只有一个 Compiler 实例，整个生命周期里暴露了很多方法，常见的 run,make,compile,finish,seal,emit 等，我们写的插件就是作用在这些暴露方法的 hook 上
+
+Compilation 负责构建编译。每一次编译（文件只要发生变化，）就会生成一个 Compilation 实例，Compilation 可以读取到当前的模块资源，编译生成资源，变化的文件，以及依赖跟踪等状态信息。同时也提供很多事件回调给插件进行拓展。
+
+:::
+
 ## 参考链接
 
 - [Webpack构建优化—使用DllPlugin、HappyPack、ParallelUglifyPlugin](https://www.jianshu.com/p/2487e3c5421e)
@@ -279,3 +319,5 @@ DllPlugin HappyPack ParallelUglifyPlugin
 - [轻松理解webpack热更新原理](https://juejin.cn/post/6844904008432222215)
 
 - [webpack打包产物解析及原理（含cjs/esm/代码分离/懒加载）](https://juejin.cn/post/7053998924071174175)
+
+- [「吐血整理」再来一打Webpack面试题](https://juejin.cn/post/6844904094281236487)
