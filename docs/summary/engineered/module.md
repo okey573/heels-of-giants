@@ -26,3 +26,5 @@ ES Module
 - [前端模块化：CommonJS,AMD,CMD,ES6](https://juejin.cn/post/6844903576309858318)
 
 - [浅谈前端模块化的发展历程](https://www.jianshu.com/p/850c139899f5)
+
+- [「万字进阶」深入浅出 Commonjs 和 Es Module](https://blog.csdn.net/qq_53669554/article/details/122112232)
