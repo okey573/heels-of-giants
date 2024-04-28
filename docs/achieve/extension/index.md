@@ -13,4 +13,4 @@ title: 实现一个同步cookies的浏览器插件
 - 比如新加一个 host: `127.0.0.1 domain.com`，然后开发调试的时候不要打开localhost或者127.0.0.1，而是用 `domain.com`，这样先登录线上系统后改 host 然后打开开发页面也会有 cookie
 - 如果这个前端项目包含了登录的代码，也就是在这个前端工程内完成登录的，那么用 http-proxy 的 cookieRewrite 相关的属性，把 cookie 写到 localhost 也行
 
-后面有时间再把代码插件的贴上来。。
+[在 github 中查看源码](https://github.com/okey573/awesome-dev-tool)
