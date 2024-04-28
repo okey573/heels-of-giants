@@ -26,4 +26,6 @@ Cross-Site Scripting(跨站脚本攻击)，简称XSS(避免和CSS重名)，是�
 
 ## 参考链接
 
+- [web安全之XSS攻击原理及防范](https://www.cnblogs.com/tugenhua0707/p/10909284.html)
+
 - [内容安全策略(CSP)详解](https://blog.csdn.net/weixin_47450807/article/details/123224654)
