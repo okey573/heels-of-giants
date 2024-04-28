@@ -49,10 +49,12 @@ function toUpperCamelCase (str) {
 function translateGroup (group) {
   return ({
     'algorithm': '算法和数据结构',
+    'api': 'API',
     'browser': '浏览器',
     'bundler': '构建工具',
     'css': 'CSS',
     'engineered': '工程化',
+    'html': 'HTML',
     'js': 'JavaScript',
     'network': '网络',
     'nodejs': 'NodeJS',
