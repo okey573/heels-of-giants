@@ -1,5 +1,6 @@
 ---
 title: 实现一个平滑上升的指令
+lastUpdate: Tue May 07 2024 22:22:54 GMT+0800 (中国标准时间)
 ---
 
 # 实现一个 vue custom directive
