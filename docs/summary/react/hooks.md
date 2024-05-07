@@ -73,12 +73,12 @@ Hooks 中的闭包问题通常是由于函数组件的局部变量在创建时�
 ```jsx
 import { useEffect, useRef, useState } from 'react'
 
-export default function App() {
+export default function App () {
   const [state, setState] = useState(0)
   const ref = useRef(0)
 
   // let times = 0
-  function handleClick() {
+  function handleClick () {
     ref.current = ref.current + 1
     alert('You clicked ' + ref.current + ' times!')
 
@@ -124,6 +124,14 @@ export default function App() {
 > 在 React 内部，为每个组件保存了一个数组，其中每一项都是一个 state 对。它维护当前 state 对的索引值，在渲染之前将其设置为 “0”。每次调用 useState 时，React 都会为你提供一个 state 对并增加索引值。你可以在文章 React Hooks: not magic, just arrays中阅读有关此机制的更多信息。
 
 总的来说，React 的这些 Hooks 的工作原理依赖于 React 的 Fiber 架构，该架构允许 React 在内部追踪组件状态和引用。每当组件渲染时，它都会以正确的顺序和位置检索状态和引用，确保它们在多次渲染之间保持不变。这个设计使得函数组件可以在不失去其函数式和声明式特性的同时，使状态和引用在组件的整个生命周期中保持持久化。
+
+## React.memo useMemo useCallback
+
+todo
+
+## useEffect useLayoutEffect useUpdateEffect
+
+todo
 
 ## 参考链接
 
