@@ -125,13 +125,48 @@ export default function App () {
 
 总的来说，React 的这些 Hooks 的工作原理依赖于 React 的 Fiber 架构，该架构允许 React 在内部追踪组件状态和引用。每当组件渲染时，它都会以正确的顺序和位置检索状态和引用，确保它们在多次渲染之间保持不变。这个设计使得函数组件可以在不失去其函数式和声明式特性的同时，使状态和引用在组件的整个生命周期中保持持久化。
 
-## React.memo useMemo useCallback
+## useCallback
 
-todo
+::: info useCallback 是一个允许你在多次渲染中缓存函数的 React Hook
 
-## useEffect useLayoutEffect useUpdateEffect
+```typescript
+const cachedFn = useCallback(fn, dependencies)
+```
 
-todo
+<br>  
+
+```typescript
+// 在 React 内部的简化实现
+function useCallback(fn, dependencies) {
+  return useMemo(() => fn, dependencies);
+}
+```
+
+:::
+
+## useMemo
+
+::: info useMemo 是一个 React Hook，它在每次重新渲染的时候能够缓存计算的结果
+
+```typescript
+const cachedValue = useMemo(calculateValue, dependencies)
+```
+
+:::
+
+## useEffect
+
+> useEffect 是一个 React Hook，它允许你 将组件与外部系统同步。
+
+## useLayoutEffect
+
+> useLayoutEffect 是 useEffect 的一个版本，在浏览器重新绘制屏幕之前触发。
+
+## useUpdateEffect
+
+useUpdateEffect 是第三方库 [ahook](https://ahooks.js.org/zh-CN/hooks/use-update-effect) 中的一个 hook
+
+> useUpdateEffect 用法等同于 useEffect，但是会忽略首次执行，只在依赖更新时执行。
 
 ## 参考链接
 
