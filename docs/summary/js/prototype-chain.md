@@ -1,15 +1,18 @@
 ---
 title: 原型链
+lastUpdated: Wed May 08 2024 18:23:09 GMT+0800 (中国标准时间)
 ---
 
 # 原型链
 
 ## 理解
 
-- Object方法继承了Function
-- Function的constructor是它自己
-- Function是Object方法的一个实例
-- 每个function的prototype都有constructor属性，等于这个function本身
+- 每个可当作构造函数的函数都有一个 **prototype** 属性（箭头函数、 async 函数、匿名函数不可以当作构造函数），这个属性值是一个对象 被称为 **原型对象**
+- 每个对象都有一个 **__proto__** 属性，这个属性值是一个对象，通常等于这个对象构造函数的 **原型对象**。而 **__proto__** 这个属性被称为 **对象原型** （也就是一个对象的原型）
+- Object 可看作是一个构造函数， 是由 Function 实例化产生的
+- Function 也是一个对象，也就是拥有继承自 Object.prototype 的继承属性
+- Function 的 constructor 是它自己
+- 每个 Function 的 prototype 都有 constructor 属性，等于这个function本身
 
 ## 演练
 
