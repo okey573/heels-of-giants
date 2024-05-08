@@ -285,3 +285,105 @@ function query (list) {
 ```
 
 :::
+
+#### 限制 request 的最大并发个数
+
+::: details 题目
+给出一组 request url 和一个 limit，限制并发请求个数为 limit ，完成这些请求
+:::
+
+::: details 答案
+
+```javascript:line-numbers {1-6,22-64}
+// 请求池
+const pool = new Set()
+// 请求队列
+const queue = []
+// 最大的并发请求数
+const limit = 3
+
+/**
+ * 模拟请求，耗时不确定，结果也可能成功或失败
+ */
+const fakeFetch = (url) => new Promise((resolve, reject) => {
+  const rn = Math.random() * 1000
+  setTimeout(() => {
+    if (rn > 500) {
+      resolve(url + ' success')
+    } else {
+      reject(url + ' error')
+    }
+  }, rn)
+})
+
+const request = (url) => {
+  return new Promise((resolve, reject) => {
+    const task = async function () {
+      console.log(url + ' start request....')
+      try {
+        const data = await fakeFetch(url)
+        resolve(data)
+      } catch (e) {
+        reject(e)
+      } finally {
+        // 重点在这里，fetch 执行完成必要执行这段代码：
+        console.log(url + ' end request....')
+        // 1. 从请求池中移除当前的请求任务
+        pool.delete(task)
+        // 2. 从请求队列中取出一个请求任务执行
+        const newTask = queue.shift()
+        if (newTask) {
+          // 注意！！ 这里要先放到 pool 里再执行
+          pool.add(newTask)
+          newTask()
+        }
+      }
+      // fakeFetch(url).then(resolve).catch(reject).finally(() => {
+      //   console.log(url + ' end request....')
+      //   pool.delete(task)
+      //   const newTask = queue.shift()
+      //   if (newTask) {
+      //     pool.add(newTask)
+      //     newTask()
+      //   }
+      // })
+    }
+
+    // 请求池已满，放入队列
+    if (pool.size >= limit) {
+      queue.push(task)
+    } else {
+      // 请求池未满，放入请求池中执行
+      pool.add(task)
+      task()
+    }
+  })
+}
+
+/******************************以下为测试代码******************************/
+
+const urls = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+]
+urls.forEach(async (url) => {
+  try {
+    const data = await request(url)
+    console.log(data)
+  } catch (e) {
+    console.warn(e)
+  }
+})
+```
+
+:::
