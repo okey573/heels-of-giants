@@ -98,17 +98,17 @@ componentDidCatch
 
 ## hook 和生命周期的等价写法
 
-| class 组件                 | Hooks 组件              |
-|--------------------------|-----------------------|
-| constructor              | useState              |
+|         class 组件         |       Hooks 组件        |
+|:------------------------:|:---------------------:|
+|       constructor        |       useState        |
 | getDerivedStateFromProps | useState 里面 update 函数 |
-| shouldComponentUpdate    | useMemo               |
-| render                   | 函数本身                  |
-| componentDidMount        | useEffect             |
-| componentDidUpdate       | useEffect             |
-| componentWillUnmount     | useEffect  里面返回的函数    |
-| componentDidCatch        | 无                     |
-| getDerivedStateFromError | 无                     |
+|  shouldComponentUpdate   |        useMemo        |
+|          render          |         函数本身          |
+|    componentDidMount     |       useEffect       |
+|    componentDidUpdate    |       useEffect       |
+|   componentWillUnmount   |  useEffect  里面返回的函数   |
+|    componentDidCatch     |           无           |
+| getDerivedStateFromError |           无           |
 
 ## 参考链接
 
