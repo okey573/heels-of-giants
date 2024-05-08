@@ -1,7 +1,7 @@
 ---
 title: 面试总结
 outline: [2,6]
-hidden: true
+lastUpdated: Wed May 08 2024 19:24:07 GMT+0800 (中国标准时间)
 ---
 
 # 面试中遇到的问题
@@ -35,41 +35,41 @@ hidden: true
 ::: details 答案
 
 ```javascript
-function fn(str) {
-    console.log('输入==>: ', str)
-    const result = []
-    const stack = []
-    for (const s of str) {
-        if ('(' === s) {
-            stack.push(s)
-        } else if (')' === s) {
-            let tempS = ''
-            while (stack.length) {
-                const popS = stack.pop()
-                if ('(' === popS) {
-                    tempS = '(' + tempS + ')'
-                    break
-                }
-                tempS = popS + tempS
-            }
-            if (tempS) {
-                if (stack.length) {
-                    stack.push(tempS)
-                } else {
-                    result.unshift(tempS)
-                }
-            } else {
-                result.unshift(s)
-            }
-        } else {
-            if (stack.length) {
-                stack.push(s)
-            } else {
-                result.unshift(s)
-            }
+function fn (str) {
+  console.log('输入==>: ', str)
+  const result = []
+  const stack = []
+  for (const s of str) {
+    if ('(' === s) {
+      stack.push(s)
+    } else if (')' === s) {
+      let tempS = ''
+      while (stack.length) {
+        const popS = stack.pop()
+        if ('(' === popS) {
+          tempS = '(' + tempS + ')'
+          break
         }
+        tempS = popS + tempS
+      }
+      if (tempS) {
+        if (stack.length) {
+          stack.push(tempS)
+        } else {
+          result.unshift(tempS)
+        }
+      } else {
+        result.unshift(s)
+      }
+    } else {
+      if (stack.length) {
+        stack.push(s)
+      } else {
+        result.unshift(s)
+      }
     }
-    console.log('输出==>: ', [...stack.reverse(), ...result].join(''), '\n')
+  }
+  console.log('输出==>: ', [...stack.reverse(), ...result].join(''), '\n')
 }
 ```
 
@@ -87,65 +87,65 @@ function fn(str) {
 
 ```typescript
 function nextPermutation(nums: number[]): void {
-    const swap = (nums, i, j) => {
-        const temp = nums[i]
-        nums[i] = nums[j]
-        nums[j] = temp
-    }
+  const swap = (nums, i, j) => {
+    const temp = nums[i]
+    nums[i] = nums[j]
+    nums[j] = temp
+  }
 
-    const reverse = (nums, start) => {
-        let left = start
-        let right = nums.length - 1
-        while (left < right) {
-            swap(nums, left, right)
-            left++
-            right--
-        }
+  const reverse = (nums, start) => {
+    let left = start
+    let right = nums.length - 1
+    while (left < right) {
+      swap(nums, left, right)
+      left++
+      right--
     }
+  }
 
-    let i = nums.length - 2
+  let i = nums.length - 2
+  /**
+   * step1: 找到数组中从右开始 [... a,b ...] 找到第一个 【a < b】 a 的位置
+   */
+  while (i >= 0) {
+    if (nums[i] < nums[i + 1]) {
+      break
+    }
+    i--
+  }
+  /**
+   * step2:
+   * 将上面step1找到的a的位置设为 i
+   *
+   * - 如果 i < 0 (也可能等于 -1)就说明 nums 是严格递减的数组， 它的下一个排列就是将它反转
+   *
+   * - 如果 i >= 0 进到step3
+   */
+  if (i < 0) {
+    // 因为题目要求不返回，操作自身 所以要自身反转 不能直接nums.reverse()
+    reverse(nums, i + 1)
+  } else {
     /**
-     * step1: 找到数组中从右开始 [... a,b ...] 找到第一个 【a < b】 a 的位置
+     * step3:
+     * 找到 i 右边，最接近nums[i]且大于nums[i]的数字位置（也就是所有大于nums[i]中的最小的数字位置）
+     * 因为上面找到i的逻辑是递减的，所以i后面的数组部分是严格递减的，所以从数组结尾开始往前遍历，第一个大于num[i]的数字就是我们要找的数字
+     * 将上面找到的数字设为j
      */
-    while (i >= 0) {
-        if (nums[i] < nums[i + 1]) {
-            break
-        }
-        i--
+    let j = nums.length - 1
+    while (j >= 0 && nums[i] >= nums[j]) {
+      j--
     }
     /**
-     * step2:
-     * 将上面step1找到的a的位置设为 i
-     *
-     * - 如果 i < 0 (也可能等于 -1)就说明 nums 是严格递减的数组， 它的下一个排列就是将它反转
-     *
-     * - 如果 i >= 0 进到step3
+     * step4:
+     * 交换 i 和 j对应的数字
      */
-    if (i < 0) {
-        // 因为题目要求不返回，操作自身 所以要自身反转 不能直接nums.reverse()
-        reverse(nums, i + 1)
-    } else {
-        /**
-         * step3:
-         * 找到 i 右边，最接近nums[i]且大于nums[i]的数字位置（也就是所有大于nums[i]中的最小的数字位置）
-         * 因为上面找到i的逻辑是递减的，所以i后面的数组部分是严格递减的，所以从数组结尾开始往前遍历，第一个大于num[i]的数字就是我们要找的数字
-         * 将上面找到的数字设为j
-         */
-        let j = nums.length - 1
-        while (j >= 0 && nums[i] >= nums[j]) {
-            j--
-        }
-        /**
-         * step4:
-         * 交换 i 和 j对应的数字
-         */
-        swap(nums, i, j)
-        /**
-         * step5:
-         * 将 i 后面的数组部分按递增顺序排序就得到了结果
-         */
-        reverse(nums, i + 1)
-    }
+    swap(nums, i, j)
+    /**
+     * step5:
+     * 将 i 后面的数组部分按递增顺序排序就得到了结果
+     */
+    reverse(nums, i + 1)
+  }
 }
 ```
 
@@ -160,9 +160,9 @@ function nextPermutation(nums: number[]): void {
 
 ```javascript
 var b = 10;
-(function b() {
-    b = 20
-    console.log(b)
+(function b () {
+  b = 20
+  console.log(b)
 })()
 ```
 
@@ -180,5 +180,108 @@ var b = 10;
 - 函数表达式标识符不可被修改（所以在 IIFE 中，给 b 赋值会报错，因为 b 已经是一个 function 了）
 
 [**在JavaScript的立即执行的具名函数A内修改A的值时到底发生了什么？**](https://segmentfault.com/q/1010000002810093)
+
+:::
+
+#### 实现一个 query 方法，实现对数据的链式查询和处理
+
+::: details 题目
+提供了一个数组结构的 data，要求实现一个 query 方法，返回一个新的数组，query 方法内部有 过滤、排序、分组 等操作，并且支持链式调用，调用最终的 execute 方法返回结果：
+
+```javascript
+const data = [
+  { id: 3, name: 'Charlie', age: 30, gender: 'male' },
+  { id: 4, name: 'David', age: 35, gender: 'male' },
+  { id: 2, name: 'Bob', age: 25, gender: 'male' },
+  { id: 5, name: 'Ella', age: 40, gender: 'female' },
+  { id: 1, name: 'Alice', age: 20, gender: 'female' }
+]
+
+
+const result = query(data)
+  .where(item => item.age > 23)
+  .sortBy('id')
+  .groupBy('gender')
+  .execute()
+
+console.log(result)
+```
+
+:::
+
+::: details 答案
+思路：用一个类来实现，实现这个类的 where sortBy groupBy 等方法，关键是每个方法最终都要返回对象本身
+
+::: code-group
+
+```javascript [class 语法]
+class Query {
+  constructor (list) {
+    this.value = list
+  }
+
+  where (cb) {
+    this.value = this.value.filter(cb)
+    return this
+  }
+
+  sortBy (key) {
+    this.value.sort((left, right) => left[key] - right[key])
+    return this
+  }
+
+  groupBy (key) {
+    const map = new Map()
+    for (const item of this.value) {
+      if (map.has(item[key])) {
+        map.get(item[key]).push(item)
+      } else {
+        map.set(item[key], [item])
+      }
+    }
+    this.value = map
+    return this
+  }
+
+  execute () {
+    return this.value
+  }
+}
+```
+
+```javascript [function 语法]
+function query (list) {
+  const wrappedList = {
+    value: list
+  }
+
+  const prototype = Object.getPrototypeOf(wrappedList)
+  prototype.where = (cb) => {
+    wrappedList.value = wrappedList.value.filter(cb)
+    return wrappedList
+  }
+  prototype.sortBy = (key) => {
+    wrappedList.value.sort((left, right) => left[key] - right[key])
+    return wrappedList
+  }
+  prototype.groupBy = (key) => {
+    const map = new Map()
+    for (const item of wrappedList.value) {
+      if (map.has(item[key])) {
+        map.get(item[key]).push(item)
+      } else {
+        map.set(item[key], [item])
+      }
+    }
+    wrappedList.value = map
+    return wrappedList
+  }
+  prototype.execute = () => {
+    return wrappedList.value
+  }
+
+  return wrappedList
+}
+```
 
 :::
