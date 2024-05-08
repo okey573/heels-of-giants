@@ -1,6 +1,6 @@
 ---
 title: hooks
-outline: [ 2,6 ]
+outline: [2,6]
 lastUpdated: Tue May 07 2024 14:19:42 GMT+0800 (中国标准时间)
 ---
 
