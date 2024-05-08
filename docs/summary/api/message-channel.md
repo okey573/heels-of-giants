@@ -1,6 +1,6 @@
 ---
 title: MessageChannel
-lastUpdated: Mon May 07 2024 17:25:11 GMT+0800 (中国标准时间)
+lastUpdated: Tue May 07 2024 17:25:11 GMT+0800 (中国标准时间)
 ---
 
 # MessageChannel
