@@ -69,19 +69,19 @@ lastUpdated: Wed May 08 2024 10:27:38 GMT+0800 (中国标准时间)
 
 ```diff [挂载]
 constructor
-- componentWillMount
-+ getDevicdeStatFromProp
+componentWillMount // [!code --]
+getDevicdeStatFromProp // [!code ++]
 render
 componentDidMount
 ```
 
 ```diff [更新]
-- componentWillReceiveProps
-+ getDevicdeStatFromProp
+componentWillReceiveProps // [!code --]
+getDevicdeStatFromProp // [!code ++]
 shouldComponentUpdate
-- componentWillUpdate
+componentWillUpdate // [!code --]
 render
-+ getSnapshotBeforeUpdate
+getSnapshotBeforeUpdate // [!code ++]
 componentDidUpdate
 ```
 
