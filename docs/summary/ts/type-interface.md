@@ -1,8 +1,8 @@
 ---
-title: 接口
+title: type 和 interface
 ---
 
-# interface
+# type 和 interface
 
 ## interface 和 type 的继承和实现
 
