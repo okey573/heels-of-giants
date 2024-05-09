@@ -30,6 +30,7 @@ lastUpdated: Thu May 09 2024 18:01:26 GMT+0800 (中国标准时间)
 - `Lowercase<S extends string> = intrinsic`
 - `Capitalize<S extends string> = intrinsic`
 - `Uncapitalize<S extends string> = intrinsic`
+- `Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>`
 
 ## 其他
 

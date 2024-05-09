@@ -25,3 +25,7 @@ Virtual DOM是对真实 DOM 的抽象,本质上是 JavaScript 对象,这个对�
 - Virtual DOM Tree 创建
 - Virtual DOM 更新
 - Virtual DOM Diff 算法
+
+## 参考链接
+
+- [[react] 什么是虚拟dom？虚拟dom比操作原生dom要快吗？虚拟dom是如何转变成真实dom并渲染到页面的?](https://blog.csdn.net/echolunzi/article/details/125586796)
