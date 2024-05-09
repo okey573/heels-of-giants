@@ -424,3 +424,47 @@ Promise.retry(getProm)
 ```
 
 :::
+
+#### class 转 function
+
+::: details 题目
+将一个 es6 的 class 转成 function
+
+```javascript
+class Example {
+  constructor (name) {
+    this.name = name
+  }
+
+  func () {
+    console.log(this.name)
+  }
+}
+```
+
+:::
+
+::: details 答案
+
+```javascript
+'use strict' // class 中的代码全部都是在一个严格模式下，对于一些不安全的操作会抛出错误，使代码更加规范。
+
+function ExampleFunction (name) { // 这是一个函数声明，函数名为 Example，它接受一个参数 name。这个函数充当了类的构造函数的角色。函数名与class名相同。
+  if (!new.target) { // 这一行检查函数是否通过 new 关键字调用。class 写法只能通过 new 关键字调用的。否则就会报如下错误
+    throw new TypeError(`Class constructor Example cannot be invoked without 'new'`)
+  }
+  this.name = name // 这里相当于构造函数的函数体，最终不需要 return 回去，因为这个步骤是在 new 操作符中作的，简单来说就是 Object.create 一个 ExampleFunction 的原型对象，以这个新创建的对象当作上下文 调用这个函数
+
+  Object.defineProperty(ExampleFunction.prototype, 'func', { // class中的方法是不会被枚举的。所以需要通过Object.defineProperty(Example.prototype, 'func', { ... }): 这一行定义了一个不可枚举的属性 func，它是 Example.prototype 对象的一个属性。
+    value: function () {
+      if (new.target) { //通过 new 关键字去调用 class 中的方法也会报错 
+        throw new TypeError('ExampleFunction.prototype.func is not a constructor')
+      }
+      console.log(this.name)
+    },
+    enumerable: false // class 中的方法是不会被枚举的
+  })
+}
+```
+
+:::
