@@ -102,7 +102,7 @@ function patchVnode (oldVnode, vnode) {
 
 ### updateChildren
 
-#### vue2 的 双端交叉指针
+#### vue2 的双端交叉指针
 
 这个函数做了如下的事：
 
