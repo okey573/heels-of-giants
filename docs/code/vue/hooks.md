@@ -55,8 +55,9 @@ export default function (model) {
            * 此时如果不使用 snapshot 直接这样使用 newValue 覆盖：
            * model.value = { ...target, [prop]:newValue }
            *
-           * 当执行到给 key2 赋值时，由于上一次给 key1 赋值是基于emit的“异步”，此时 target 上还没有 key1 的值
-           * 所以会导致最终结果只有 key2 的值
+           * 当执行到给 key2 赋值时，由于上一次给 key1 赋值是基于 emit 的“异步”，此时 target 上还没有 key1 的值
+           * 所以会导致最终结果只有 key2 的值也就是：
+           * proxyModel.value 等于 { key2: '2' }
            */
           Reflect.set(snapshot, prop, newValue)
           model.value = {
