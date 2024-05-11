@@ -29,3 +29,8 @@ lastUpdated: Thu May 09 2024 10:04:46 GMT+0800 (中国标准时间)
 ### 例题
 
 [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray)
+
+## 前缀和
+
+- 一维前缀和就是一个简单的 dp: dp[i] = dp[i - 1] + dp[i - 2]
+- 二维前缀和 dp[x, y] = dp[x - 1, y] + dp[x, y - 1] - dp[x - 1, y - 1] + grip[x, y]
