@@ -1,6 +1,6 @@
 ---
 title: 算法
-lastUpdated: Thu May 09 2024 10:04:46 GMT+0800 (中国标准时间)
+lastUpdated: Sun May 12 2024 13:13:52 GMT+0800 (中国标准时间)
 ---
 
 # 算法
@@ -10,7 +10,6 @@ lastUpdated: Thu May 09 2024 10:04:46 GMT+0800 (中国标准时间)
 - 图论：最短路、最小生成树、网络流建模
 - 动态规划：背包问题、最长子序列、计数问题
 - 基础技巧：分治、倍增、二分、贪心
-
 
 ## 滑动窗口
 
@@ -34,3 +33,13 @@ lastUpdated: Thu May 09 2024 10:04:46 GMT+0800 (中国标准时间)
 
 - 一维前缀和就是一个简单的 dp: dp[i] = dp[i - 1] + dp[i - 2]
 - 二维前缀和 dp[x, y] = dp[x - 1, y] + dp[x, y - 1] - dp[x - 1, y - 1] + grip[x, y]
+
+## 背包问题
+
+- 0-1 背包一般可以使用动态规划解决 `dp[i][j]`是二维数组 表示从0到i的物品，背包容量为0到j的最大容量
+- 初始化时分别对 i=0 和 j=0 的两种情况初始化
+- 状态转移也分两种情况，`nums[i]` 大于 容量 `j`； `nums[i]` 小于等于 容量 `j`
+
+### 例题
+
+[416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/description/)
