@@ -22,4 +22,13 @@ lastUpdated: Thu May 09 2024 10:04:46 GMT+0800 (中国标准时间)
 [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/merge-intervals/description/)
 
 ### 参考题解
+
 [吃🐳！🤷‍♀️竟然一眼秒懂合并区间！](https://leetcode.cn/problems/merge-intervals/solutions/204805/chi-jing-ran-yi-yan-miao-dong-by-sweetiee/?envType=study-plan-v2&envId=top-100-liked)
+
+## 二叉树
+
+- 二叉树的遍历
+    - 先序遍历： 先访问根节点，然后访问左子树， 最后访问右子树
+    - 中序遍历： 先访问左子树，然后访问根节点， 最后访问右子树
+    - 后序遍历： 先访问左子树，然后访问右子树， 最后访问根节点
+- 二叉树的很多问题基本都是用递归解决的
