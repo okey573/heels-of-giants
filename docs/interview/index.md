@@ -468,3 +468,43 @@ function ExampleFunction (name) { // 这是一个函数声明，函数名为 Exa
 ```
 
 :::
+
+#### 考察 Proxy
+
+:::  details 题目
+
+```javascript
+const a = add[1][2] + 3
+const b = add[3][4][5] + 6
+
+console.log(a) // 输出6
+console.log(b) // 输出18
+```
+
+:::
+
+::: details 答案
+
+一共有三个关键点
+
+- `add[1]` 直接访问 `add` 这个对象属性时，要做一些特殊操作
+- `add[1][2]` `add` 这个对象属性可以连续获取
+- `add[1][2] + 3` 对象和普通对象相加，会调用对象的 `toPrimitive` 方法
+
+```javascript
+const add = new Proxy(obj, {
+  get (target, prop, receiver) {
+    if (prop === Symbol.toPrimitive) {
+      const ret = target.current
+      // 这里要清零
+      target.current = 0
+      return () => ret
+    } else {
+      target.current = target.current + Number(prop)
+      return receiver
+    }
+  }
+})
+```
+
+:::
