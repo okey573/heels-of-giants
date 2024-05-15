@@ -83,3 +83,23 @@ export default function (model) {
 }
 
 ```
+
+## useComponentRef
+
+::: code-group
+
+```typescript [hook]
+import { ref } from 'vue'
+
+export function useComponentRef<T extends abstract new (...args: any) => any>(_: T) {
+  return ref<InstanceType<T>>()
+}
+```
+
+```typescript [使用]
+import { ElForm } from 'element-plus'
+
+const formRef = useComponentRef(ElForm)
+```
+
+:::
