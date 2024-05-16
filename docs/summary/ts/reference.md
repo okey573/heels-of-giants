@@ -8,7 +8,21 @@ lastUpdated: Thu May 09 2024 18:01:26 GMT+0800 (中国标准时间)
 ## 基础
 
 - `&` 交叉类型
+
+```typescript
+type a = b & c
+
+// 可以理解成 `a` 这个类型既是 `b` 也是 `c`，所以会有 `b` 和 `c` 的全部属性
+```
+
 - `|` 联合类型
+
+```typescript
+type a = b | c
+
+// 可以理解成 `a` 这个类型既可以是 `b` 也可以是 `c`，所以只会明确的有 `b` 和 `c` 的共有属性
+```
+
 - `keyof` 属性keys值
 
 ## Utility Types
