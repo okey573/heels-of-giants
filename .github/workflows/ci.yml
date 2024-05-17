@@ -25,7 +25,7 @@ jobs:
           token: ${{ secrets.personal_access_token }}
           repository-name: okey573/okey573.github.io
           target-folder: docs
-          clean: true
+          clean: false
 
   algolia:
     runs-on: ubuntu-latest
