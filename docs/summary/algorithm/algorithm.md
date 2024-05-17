@@ -43,3 +43,11 @@ lastUpdated: Sun May 12 2024 13:13:52 GMT+0800 (中国标准时间)
 ### 例题
 
 [416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/description/)
+
+## 回溯
+
+- 寻找所有可行解的题，都可以尝试用「搜索回溯」的方法来解决 (dfs)
+
+### 例题
+
+[39. 组合总和](https://leetcode.cn/problems/combination-sum/description)
