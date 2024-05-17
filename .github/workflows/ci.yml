@@ -23,7 +23,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: docs/.vitepress/dist
-          branch: master2
+          branch: master
           token: ${{ secrets.personal_access_token }}
           repository-name: okey573/okey573.github.io
           target-folder: docs
