@@ -51,3 +51,7 @@ lastUpdated: Sun May 12 2024 13:13:52 GMT+0800 (中国标准时间)
 ### 例题
 
 [39. 组合总和](https://leetcode.cn/problems/combination-sum/description)
+
+## 二分查找
+
+- 中点算法 `low + Math.floor((high - low) / 2)`
