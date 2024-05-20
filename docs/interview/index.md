@@ -489,7 +489,7 @@ console.log(b) // 输出18
 
 - `add[1]` 直接访问 `add` 这个对象属性时，要做一些特殊操作
 - `add[1][2]` `add` 这个对象属性可以连续获取
-- `add[1][2] + 3` 对象和普通对象相加，会调用对象的 `toPrimitive` 方法
+- `add[1][2] + 3` 对象和普通对象相加，会调用对象的 `@@toPrimitive` 方法
 
 ```javascript
 const add = new Proxy(obj, {
