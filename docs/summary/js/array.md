@@ -15,4 +15,6 @@ title: 数组
 
 ## 参考链接
 
+- [Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
 - [实现数组扁平化的6种方法](https://blog.csdn.net/ACHHC/article/details/128811653)
