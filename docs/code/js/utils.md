@@ -1,68 +1,102 @@
 ---
 title: 工具类
+lastUpdated: Wed May 22 2024 15:45:11 GMT+0800 (中国标准时间)
 ---
 
-工具类型的方法
+# 工具类型的方法
 
 ## 防抖
 
-```javascript
-const debounce = function (fn, wait, immediate) {
-  // 自由变量，debounce执行完成被释放，time也不会被释放
-  let time;
-  // 返回一个闭包，接受参数
+::: code-group
+
+```javascript [基础版]
+const debounce = function (fn, delay) {
+  let timer
   return function (...args) {
-    // 保存闭包被调用时的this
-    const this_ = this;
-    // 清除上一次的定时器
-    if (time) {
-      clearTimeout(time);
-    }
-    // 配置开关
-    if (immediate) {
-      const action = !time;
-      // time没置空前因为time存在，所以fn不会执行
-      time = setTimeout(function () {
-        fn.apply(this_, args);
-        // 每隔wait时间将time置为空
-        time = null;
-      }, wait);
-      if (action) {
-        fn.apply(this_, args);
-      }
-    } else {
-      // 不再是直接执行fn，在内部传递参数
-      time = setTimeout(function () {
-        // 通过apply修改fn的this
-        fn.apply(this_, args);
-      }, wait);
-    }
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      fn.apply(this, args)
+    }, delay)
   }
-};
+}
 ```
 
-## 节流
-
-```javascript
-const throttle = function (fun, delay) {
-  let last, deferTimer
-  return function (args) {
-    let that = this
-    let _args = arguments
-    let now = +new Date()
-    if (last && now < last + delay) {
-      clearTimeout(deferTimer)
-      deferTimer = setTimeout(function () {
-        last = now
-        fun.apply(that, _args)
+```javascript [控制立即执行]
+const debounce = function (fn, delay, immediate) {
+  let timer
+  return function (...args) {
+    if (timer) clearTimeout(timer)
+    if (immediate) {
+      const action = !timer
+      timer = setTimeout(() => {
+        fn.apply(this, args)
+        timer = null
       }, delay)
+      action && fn.apply(this, args)
     } else {
-      last = now
-      fun.apply(that, _args)
+      timer = setTimeout(() => {
+        fn.apply(this, args)
+      }, delay)
     }
   }
 }
 ```
+
+:::
+
+## 节流
+
+::: code-group
+
+```javascript [时间戳实现]
+// 第一次会立即触发
+const throttle = function (fn, delay, immediate) {
+  let last = 0
+  return function (...args) {
+    if (Date.now() - last > delay) {
+      fn.apply(this, args)
+      last = Date.now()
+    }
+  }
+}
+```
+
+```javascript [定时器实现]
+// 第一次不会立即触发
+const throttle = function (fn, delay, immediate) {
+  let timer
+  return function (...args) {
+    if (!timer) {
+      timer = setTimeout(() => {
+        fn.apply(this, args)
+        timer = null
+      }, delay)
+    }
+  }
+}
+```
+
+```javascript [二者结合]
+// 时间戳和定时器结合，实现最后一次必定触发
+const throttle = function (fn, delay) {
+  let timer
+  let last = 0
+  return function (...args) {
+    if (Date.now() - last > delay) {
+      fn.apply(this, args)
+    } else {
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        fn.apply(this, args)
+        timer = null
+        last = Date.now()
+      }, delay)
+    }
+  }
+}
+```
+
+:::
 
 ## delay
 
