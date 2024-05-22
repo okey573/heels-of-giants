@@ -1,6 +1,6 @@
 ---
 title: 工具类
-lastUpdated: Wed May 22 2024 15:45:11 GMT+0800 (中国标准时间)
+lastUpdated: Wed May 22 2024 16:05:51 GMT+0800 (中国标准时间)
 ---
 
 # 工具类型的方法
@@ -110,26 +110,40 @@ const delay = (duration) => new Promise(resolve => setTimeout(resolve, duration)
 const typeOf = (o) => Object.prototype.toString.call(o).match(/\[object (.*?)\]/)[1].toLowerCase()
 ```
 
-## createDefaultValueObjectArray
+## 创建数组
 
-创建一个指定长度的数组，存在每个数组元素都指向同一块内存的引用问题
+[稀疏数组](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#%E7%A8%80%E7%96%8F%E6%95%B0%E7%BB%84)
 
-```javascript
-const createArray = (length, obj) => {
-  return Array.apply(null, { length }).map(_ => obj)
-  // return Array.from(Array(length), item => obj)
-}
+::: code-group
+
+```javascript [指定长度]
+// 用构造函数创建的是稀疏数组，后续还可以用 fill 方法填充值
+new Array(100)
+
+// 不同的写法，这样创建的不是稀疏数组
+Array.apply(null, { length: 100 })
+
+// Array.from 还有第二个参数是一个 map 函数
+Array.from({ length: 100 })
 ```
 
-## badge log
+```javascript [连续数字数组]
+[...new Array(100).keys()]
+```
 
-```javascript
+:::
+
+## 控制台
+
+#### badgeLog
+
+```javascript [badgeLog]
 function badgeLog (leftText, rightText, leftColor = '#606060', rightColor = '#1475b2') {
   console.log(`%c ${leftText} %c ${rightText} `, `padding: 1px; border-radius: 3px 0 0 3px; color: #fff; background: ${leftColor};`, `padding: 1px; border-radius: 0 3px 3px 0; color: #fff; background: ${rightColor};`)
 }
 ```
 
-## timer log
+#### timer log
 
 ```javascript
 const id = 'id'
