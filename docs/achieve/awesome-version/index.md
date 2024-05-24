@@ -1,6 +1,6 @@
 ---
 title: 实现灵活控制SPA版本的vite插件
-outline: [ 2,6 ]
+outline: [2,6]
 ---
 
 # 实现灵活控制SPA版本的vite插件
