@@ -1,6 +1,6 @@
 ---
 title: 合成事件
-lastUpdate: Wed May 08 2024 14:57:31 GMT+0800 (中国标准时间)
+lastUpdated: Wed May 08 2024 14:57:31 GMT+0800 (中国标准时间)
 ---
 
 # 合成事件 (SyntheticEvent)
