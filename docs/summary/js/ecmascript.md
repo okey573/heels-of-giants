@@ -5,7 +5,6 @@ outline: [2,6]
 
 # ECMAScript
 
-👻👻👻
 
 ## ECMAScript 和 JavaScript 的关系
 
