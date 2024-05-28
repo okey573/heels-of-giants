@@ -1,7 +1,7 @@
 ---
 title: template
 outline: [2,6]
-lastUpdated: Sat May 11 2024 16:41:23 GMT+0800 (中国标准时间)
+lastUpdated: Tue May 28 2024 20:57:55 GMT+0800 (中国标准时间)
 ---
 
 一些常用的模板
