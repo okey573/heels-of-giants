@@ -28,7 +28,7 @@ export default {
   vite: {
     server: {
       host: true,
-      open: true,
+      open: false,
       port: 2079
     }
   }
