@@ -13,9 +13,6 @@ hero:
       text: Summary
       link: /summary/
     - theme: alt
-      text: TODOS
-      link: /todo/
-    - theme: alt
       text: View on GitHub
       link: https://github.com/okey573/heels-of-giants
 ---
