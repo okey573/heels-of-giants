@@ -55,3 +55,5 @@ lastUpdated: Fri May 24 2024 16:27:37 GMT+0800 (中国标准时间)
 - [如何在线上使用 SourceMap ？](https://blog.csdn.net/xgangzai/article/details/136668414)
 
 - [Webpack 实战系列一：正确使用 Sourcemap](https://www.51cto.com/article/695341.html)
+
+- [一文看懂 webpack 的所有 source map ！](https://juejin.cn/post/7016510600960278565)
