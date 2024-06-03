@@ -39,4 +39,10 @@ lastUpdated: Thu May 30 2024 10:29:35 GMT+0800 (中国标准时间)
 
 ## 链表
 
-- 相交链表 消除补差 [判断链表相交](https://leetcode.cn/problems/intersection-of-two-linked-lists/solutions/10774/tu-jie-xiang-jiao-lian-biao-by-user7208t/)
+- 相交链表 消除步差 [判断链表相交](https://leetcode.cn/problems/intersection-of-two-linked-lists/solutions/10774/tu-jie-xiang-jiao-lian-biao-by-user7208t/)
+
+- 用一个 Map 递归深拷贝带有随机指针的链表
+
+### 例题
+
+[138. 随机链表的复制](https://leetcode.cn/problems/copy-list-with-random-pointer/description/)
