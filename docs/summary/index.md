@@ -10,4 +10,4 @@ lastUpdated: false
 - BroadcastChannel
 - WebGL
 - WebGPU
-- vercel
+- Vercel
