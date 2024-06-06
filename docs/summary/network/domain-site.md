@@ -1,6 +1,7 @@
 ---
 title: domain & site
 outline: [2,6]
+lastUpdated: Thu Jun 06 2024 19:57:36 GMT+0800 (中国标准时间)
 ---
 
 # 域和站
@@ -46,9 +47,11 @@ _[完整的Public Suffix List](https://publicsuffix.org/list/public_suffix_list.
 
 eTLD+1相同 + 协议相同
 
-这里的跨站和cookie中的“跨站”不同。cookie中的SameSite认为eTLD+1相同就是同站，不论协议是否相同
+这里的跨站和cookie中的“跨站”不同。cookie中的SameSite认为eTLD+1相同就是同站，不论协议是否相同（跟浏览器版本有关系，新版本认为协议不同也是跨站）
 
 
 ## 参考链接
+
+- [站点（Site）](https://developer.mozilla.org/zh-CN/docs/Glossary/Site)
 
 - [浏览器原理之跨域？跨站？你真的不懂我！](https://cloud.tencent.com/developer/article/2134072)
