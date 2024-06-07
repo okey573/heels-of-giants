@@ -1,6 +1,7 @@
 ---
 title: 缓存
 outline: [2,6]
+lastUpdated: Fri Jun 07 2024 18:28:15 GMT+0800 (中国标准时间)
 ---
 
 # 浏览器缓存（HTTP缓存）
@@ -79,6 +80,8 @@ _Last-Modified 和 If-Modified-Since 的值都是时间_
 强缓存优先级高于协商缓存
 
 ## 参考链接
+
+- [HTTP 缓存](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Caching)
 
 - [浏览器http请求缓存，cache-control是服务器设置，还是浏览器设置](https://blog.csdn.net/qq_17335549/article/details/128630153)
 
