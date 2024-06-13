@@ -1,10 +1,10 @@
 ---
 title: ecmascript
 outline: [2,6]
+lastUpdate: Thu Jun 13 2024 16:45:08 GMT+0800 (中国标准时间)
 ---
 
 # ECMAScript
-
 
 ## ECMAScript 和 JavaScript 的关系
 
@@ -36,13 +36,9 @@ ES6 的第一个版本，就这样在 2015 年 6 月发布了，正式名称就�
 
 一种新的语法从提案到变成正式标准，需要经历五个阶段。每个阶段的变动都需要由 TC39 委员会批准。
 
-- Stage 0 - Strawman（展示阶段）
-- Stage 1 - Proposal（征求意见阶段）
-- Stage 2 - Draft（草案阶段）
-- Stage 3 - Candidate（候选人阶段）
-- Stage 4 - Finished（定案阶段）
+[提案的说明](https://tc39.es/process-document/)
 
-一个提案只要能进入 Stage 2，就差不多肯定会包括在以后的正式标准里面。ECMAScript 当前的所有提案，可以在 TC39 的官方网站 GitHub.com/tc39/ecma262 查看。
+[查看所有提案](https://github.com/tc39/proposals)
 
 ## 特性
 
