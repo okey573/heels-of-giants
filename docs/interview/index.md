@@ -1,7 +1,7 @@
 ---
 title: 面试总结
 outline: [2,6]
-lastUpdated: Wed May 08 2024 19:24:07 GMT+0800 (中国标准时间)
+lastUpdated: Fri Jun 14 2024 17:01:11 GMT+0800 (中国标准时间)
 ---
 
 # 面试中遇到的问题
@@ -492,7 +492,7 @@ console.log(b) // 输出18
 - `add[1][2] + 3` 对象和普通对象相加，会调用对象的 `@@toPrimitive` 方法
 
 ```javascript
-const add = new Proxy(obj, {
+const add = new Proxy({ current: 0 }, {
   get (target, prop, receiver) {
     if (prop === Symbol.toPrimitive) {
       const ret = target.current
