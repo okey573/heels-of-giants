@@ -34,6 +34,13 @@ lastUpdated: Sun May 12 2024 13:13:52 GMT+0800 (中国标准时间)
 - 一维前缀和就是一个简单的 dp: dp[i] = dp[i - 1] + dp[i - 2]
 - 二维前缀和 dp[x, y] = dp[x - 1, y] + dp[x, y - 1] - dp[x - 1, y - 1] + grip[x, y]
 
+### 例题
+
+[437. 路径总和 III](https://leetcode.cn/problems/path-sum-iii/description/)
+
+[560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/description/)
+
+
 ## 背包问题
 
 - 0-1 背包一般可以使用动态规划解决 `dp[i][j]`是二维数组 表示从0到i的物品，背包容量为0到j的最大容量
