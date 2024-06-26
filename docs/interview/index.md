@@ -1,7 +1,7 @@
 ---
 title: 面试总结
 outline: [2,6]
-lastUpdated: Fri Jun 14 2024 17:01:11 GMT+0800 (中国标准时间)
+lastUpdated: 2024/06/26 20:35:40 GMT+0800 (中国标准时间)
 ---
 
 # 面试中遇到的问题
@@ -508,3 +508,34 @@ const add = new Proxy({ current: 0 }, {
 ```
 
 :::
+
+#### 消除异步传染性
+
+:::  details 题目
+
+```javascript
+const rpc = async () => {
+  const res = await fetch('https://api.chucknorris.io/jokes/random')
+  return res.json()
+}
+
+const entry = async () => {
+  const data = await rpc()
+  console.log(data)
+}
+
+// 去掉 entry 函数的 async 和 await 使得程序还能正常运行
+```
+
+:::
+
+::: details 答案
+
+这在JavaScript中是不可能的，因为JavaScript是单线程的，它依赖事件循环来处理异步操作
+
+不过可以参考 React 的 Suspense 组件，当 Promise 的状态为 pending 时，不停的通过 throw + try catch 实现递归
+
+不过这样同样会阻塞线程，在递归阶段会导致页面卡死
+
+:::
+
