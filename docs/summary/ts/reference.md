@@ -1,6 +1,6 @@
 ---
 title: 参考
-lastUpdated: 2024/6/18 19:44:18 GMT+0800 (中国标准时间)
+lastUpdated: 2024/6/28 18:46:30 GMT+0800 (中国标准时间)
 ---
 
 # REFERENCE
@@ -50,7 +50,7 @@ type a = b | c
 
 - `infer` TypeScript 中的一个类型推断关键字，用于从类型别名或泛型中提取类型信息。它通常与条件类型结合使用，允许在类型操作中进行更复杂的类型推断。
 - `intrinsic` **一个内置关键字，还没搞懂**
-
+- `never` 可被用作排除某个类型，`type BanType<T, U> = T extends U ? T : never`
 ## 参考链接
 
 - [Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
