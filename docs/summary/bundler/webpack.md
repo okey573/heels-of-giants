@@ -19,7 +19,7 @@ outline: [2,6]
 
 ## 热更新原理
 
-TODO
+TBD
 
 ## loader
 

@@ -7,7 +7,8 @@ const achieveItems = fg.sync(['achieve/**/*.md'], { cwd: 'docs' }).map(file => {
 })
 
 export default [
-  { text: '🔋 日常总结', link: '/summary/' },
+  { text: '🔋 前端总结', link: '/summary/' },
+  { text: '🌱 RUST', link: '/rust/' },
   { text: '🍒 代码片段', link: '/code/' },
   { text: '📖 面试总结', link: '/interview/' },
   {

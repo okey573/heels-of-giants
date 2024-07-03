@@ -54,7 +54,7 @@ https://promisesaplus.com/
 
 ## 实现 Promise
 
-_TODO 实现 Promise 类_
+_TBD 实现 Promise 类_
 
 ### 实现 Promise.all
 
