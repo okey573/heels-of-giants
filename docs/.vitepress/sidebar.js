@@ -42,6 +42,7 @@ function getMenu (fileName, parentPath) {
 
   const isFile = fs.statSync(fileUrl).isFile()
   if (isFile) {
+    if (!fileName.endsWith('.md')) return null
     const { data } = matter.read(`docs/${parentPath}/` + fileName)
     if (data.hidden) return null
     return { text: data.title, link: `/${parentPath}/` + fileName }
@@ -57,7 +58,7 @@ function getMenu (fileName, parentPath) {
       collapsed: true,
       items: subFiles.map(subFileName => {
         return getMenu(subFileName, newParentPath)
-      })
+      }).filter(Boolean)
     }
   }
 }
