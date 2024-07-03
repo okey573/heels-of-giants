@@ -1,7 +1,7 @@
 ---
 title: promise
 outline: [2,6]
-lastUpdated: Thu Jun 13 2024 16:22:04 GMT+0800 (中国标准时间)
+lastUpdated: 2024/07/03 10:09:15 GMT+0800 (中国标准时间)
 ---
 
 # Promise是什么？
@@ -127,4 +127,12 @@ function theAllSettled (promises) {
 
 ::: details Promise then 第二个参数和 catch 的区别
 区别就是 catch 可以继续捕获 then 当中抛出的异常
+:::
+
+::: details Promise 的值穿透
+值穿透指的是，链式调用的参数不是函数时，会发生值穿透，就传入的非函数值忽略，传入的是之前的函数参数
+:::
+
+::: details Promise 的异常穿透
+当使用 Promise 的 then() 链式调用的时候,可以在最后指定失败的回调，前面任何操作出现异常,都会传到最后失败的回调中处理
 :::
