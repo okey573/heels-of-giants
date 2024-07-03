@@ -1,3 +1,5 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import fg from 'fast-glob'
 import matter from 'gray-matter'
 
@@ -13,33 +15,51 @@ export default fg.sync([
   dot: true
 }).reduce((previousValue, currentValue) => ({
   ...previousValue,
-  [`/${currentValue}/`]: getItems(currentValue)
+  [`/${currentValue}/`]: getSidebar(currentValue)
 }), {})
 
-function getItems (module) {
-  // 这里的module就是 code summary 这些模块
-  // 先获取module下的所有md， 排除模块下的index.md
-  const files = fg.sync(['*/**/*.md'], { cwd: `docs/${module}` })
-  // 根据第一级目录分组收纳
-  const result = []
-  for (const file of files) {
-    const { data } = matter.read(`docs/${module}/` + file)
-    if (data.hidden) continue
-    const group = file.split('/')[0]
-    const groupZh = translateGroup(group)
-    const index = result.findIndex(res => res.text === groupZh)
-    const item = { text: data.title, link: `/${module}/` + file }
-    if (index > -1) {
-      result[index].items.push(item)
-    } else {
-      result.push({
-        text: groupZh,
-        collapsed: true,
-        items: [item]
+/**
+ *
+ * @see https://vitepress.dev/zh/reference/default-theme-sidebar#multiple-sidebars
+ * @param {string} sidebar 就是 code interview summary 这些模块（侧边栏，和 nav.js 中的对应）
+ * @return {Array} 对应 sidebar 下的菜单
+ */
+function getSidebar (sidebar) {
+  const files = fg.sync(['*', '!index.md'], {
+    cwd: `docs/${sidebar}`,
+    onlyFiles: false,
+    // onlyDirectories: true,
+    deep: 1,
+  })
+
+  return files.map(fileName => getMenu(fileName, sidebar)).filter(Boolean)
+}
+
+
+function getMenu (fileName, parentPath) {
+  const rootUrl = new URL(`../${parentPath}`, import.meta.url)
+  const fileUrl = new URL(path.join(rootUrl.href, `./${fileName}`))
+
+  const isFile = fs.statSync(fileUrl).isFile()
+  if (isFile) {
+    const { data } = matter.read(`docs/${parentPath}/` + fileName)
+    if (data.hidden) return null
+    return { text: data.title, link: `/${parentPath}/` + fileName }
+  } else {
+    const newParentPath = parentPath + '/' + fileName
+    const subFiles = fg.sync(['*'], {
+      cwd: `docs/${newParentPath}`,
+      onlyFiles: false,
+      deep: 1,
+    })
+    return {
+      text: translateGroup(fileName),
+      collapsed: true,
+      items: subFiles.map(subFileName => {
+        return getMenu(subFileName, newParentPath)
       })
     }
   }
-  return result
 }
 
 function toUpperCamelCase (str) {
@@ -63,6 +83,7 @@ function translateGroup (group) {
     'react': 'React',
     'security': '安全',
     'ts': 'TypeScript',
-    'vue': 'Vue'
+    'vue': 'Vue',
+    'src': '源码'
   })[group] || toUpperCamelCase(group)
 }
