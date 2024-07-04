@@ -53,12 +53,14 @@ function getMenu (fileName, parentPath) {
       onlyFiles: false,
       deep: 1,
     })
+    const items = subFiles.map(subFileName => {
+      return getMenu(subFileName, newParentPath)
+    }).filter(Boolean)
+    if (!items.length) return null
     return {
       text: translateGroup(fileName),
       collapsed: true,
-      items: subFiles.map(subFileName => {
-        return getMenu(subFileName, newParentPath)
-      }).filter(Boolean)
+      items
     }
   }
 }
