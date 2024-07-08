@@ -1,5 +1,5 @@
 ---
-title: Beacon API
+title: Beacon
 ---
 
 # Beacon API
