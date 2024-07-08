@@ -12,5 +12,8 @@
     "gray-matter": "^4.0.3",
     "nprogress": "^0.2.0",
     "vitepress": "^1.0.0"
+  },
+  "volta": {
+    "node": "20.15.0"
   }
 }
