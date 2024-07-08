@@ -55,7 +55,7 @@ window.addEventListener('message', function (event) {
 - MessageChannel 还可用作深拷贝。但 message 事件是异步的（宏任务），且拷贝的对象不能含有 function。
 
 ```javascript
-  const copy = (obj) => {
+const copy = (obj) => {
   const { resolve, promise } = Promise.withResolvers()
   const { port1, port2 } = new MessageChannel()
   port1.onmessage = (e) => {
