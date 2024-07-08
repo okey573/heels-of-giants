@@ -7,7 +7,6 @@ lastUpdated: false
 
 - WebAssembly
 - WebContainer
-- BroadcastChannel
 - WebGL
 - WebGPU
 - Vercel
