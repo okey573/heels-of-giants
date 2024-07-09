@@ -1,6 +1,7 @@
 ---
 title: 图片的懒加载和预加载
 outline: [2,6]
+lastUpdated: 2024/07/09 15:47:00 GMT+0800 (中国标准时间)
 ---
 
 # 图片的懒加载和预加载
@@ -26,6 +27,14 @@ outline: [2,6]
 - 滚动监听+scrollTop+offsetTop+innerHeight
 - 滚动监听+getBoundingClientRect()
 - IntersectionObserver
+
+### 原生实现
+
+将 loading 属性设置为 lazy
+
+```html
+    <img src="https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg" loading="lazy">
+```
 
 ## 预加载
 
