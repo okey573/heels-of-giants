@@ -1,7 +1,7 @@
 ---
-title: 面试总结
+title: 总结
 outline: [2,6]
-lastUpdated: 2024/07/09 17:32:00 GMT+0800 (中国标准时间)
+lastUpdated: 2024/07/10 20:04:00 GMT+0800 (中国标准时间)
 ---
 
 # 面试中遇到的问题
@@ -31,6 +31,17 @@ lastUpdated: 2024/07/09 17:32:00 GMT+0800 (中国标准时间)
 21. html中前缀为 data-开头的元素属性是什么 （自定义数据属性）
 22. 移动端如何实现上拉加载，下拉刷新
 23. 如何判断dom元素是否在可视区域
+24. 如何通过设置失效时间清除本地存储的数据 （get的时候判断时间， proxy、setInterval）
+25. 如果不使用脚手架，如果用 webpack 构建一个自己的 react 应用 （dev-server 配置  loader plugin）
+26. 用 nodejs 实现一个命令行工具，统计输入目录下面指定代码的行数
+27. package.json 中 sideEffects 的作用
+28. script 标签上有哪些属性及作用 （src type async defer crossorigin fetchpriority integrity referrerpolicy）
+29. 为什么 SPA 应用都会提供一个 hash 路由，好处是什么?
+30. react 如何监听路由变化
+31. 单点登录
+32. web 网页如何禁止移除水印 （mutationObserver）
+33. 页面白屏原因是什么，怎么排查 （资源 兼容性 js运行错误 服务器错误 缓存）
+34. JS 中如何实现大对象深度对比 （== === Object.is）
 
 ## 算法类
 
