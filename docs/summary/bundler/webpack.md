@@ -1,6 +1,7 @@
 ---
 title: webpack
 outline: [2,6]
+lastUpdated: 2024/07/10 18:03:00 GMT+0800 (中国标准时间)
 ---
 
 # [Webpack](https://webpack.docschina.org/)
@@ -267,6 +268,14 @@ class FileListPlugin {
 
 module.exports = FileListPlugin;
 ```
+
+## 特殊属性
+
+### sideEffect
+
+在一个纯粹的 ES 模块世界中，很容易识别出哪些文件有副作用。然而，我们的项目无法达到这种纯度，所以，此时有必要提示 webpack 编译器哪些代码是纯粹的。
+
+> 副作用（effect 或者 side effect）指在导入时会执行特殊行为的代码，而不是仅仅暴露一个或多个导出内容。polyfill 就是一个例子，尽管其通常不提供导出，但是会影响全局作用域，因此 polyfill 将被视为一个副作用。
 
 ## 优化
 
