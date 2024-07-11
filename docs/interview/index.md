@@ -32,7 +32,7 @@ lastUpdated: 2024/07/10 20:04:00 GMT+0800 (中国标准时间)
 22. 移动端如何实现上拉加载，下拉刷新
 23. 如何判断dom元素是否在可视区域
 24. 如何通过设置失效时间清除本地存储的数据 （get的时候判断时间， proxy、setInterval）
-25. 如果不使用脚手架，如果用 webpack 构建一个自己的 react 应用 （dev-server 配置  loader plugin）
+25. 如果不使用脚手架，如果用 webpack 构建一个自己的 react 应用 （dev-server 配置 loader plugin）
 26. 用 nodejs 实现一个命令行工具，统计输入目录下面指定代码的行数
 27. package.json 中 sideEffects 的作用
 28. script 标签上有哪些属性及作用 （src type async defer crossorigin fetchpriority integrity referrerpolicy）
@@ -573,6 +573,76 @@ const entry = async () => {
 不过可以参考 React 的 Suspense 组件，当 Promise 的状态为 pending 时，不停的通过 throw + try catch 实现递归
 
 不过这样同样会阻塞线程，在递归阶段会导致页面卡死
+
+:::
+
+#### 判断对象是否存在循环引用
+
+:::  details 题目
+
+```javascript
+const obj = {
+  name: '123',
+  child: {}
+}
+
+obj.child.obj = obj.child
+
+// 如上是一个存在循环引用的对象
+```
+
+:::
+
+::: details 答案
+
+::: code-group
+
+```javascript [Set + 递归]
+function hasCircularReference (object) {
+  let res = false
+  const refs = new WeakSet()
+
+  const check = (o) => {
+    if (typeof o !== 'object') return
+    if (refs.has(o)) {
+      return res = true
+    }
+    refs.add(o)
+    for (const key in o) {
+      if (o.hasOwnProperty(key)) {
+        check(o[key])
+      }
+    }
+
+    refs.delete(o)
+  }
+
+  // 平级检测完成之后，将当前对象删除，防止误判
+  /*
+    例如：对象的属性指向同一引用，如果不删除的话，会被认为是循环引用
+    let tempObj = {
+      name: '前端胖头鱼'
+    }
+    let obj4 = {
+      obj1: tempObj,
+      obj2: tempObj
+    }
+  */
+  check(object)
+  return res
+}
+```
+
+```javascript [JSON.stringify]
+function hasCircularReference (object) {
+  try {
+    JSON.stringify(object)
+    return false
+  } catch (e) {
+    return !!(e.name === 'TypeError' && e.message.includes('circular structure'))
+  }
+}
+```
 
 :::
 
