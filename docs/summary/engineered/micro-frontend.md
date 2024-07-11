@@ -67,6 +67,8 @@ JavaScript隔离：每当微应用的JavaScript被加载并运行时，它的核
 
 - [Qiankun 原理-js沙箱是怎么做隔离的](https://juejin.cn/post/7148075486403362846)
 
-- [Qiankun实践——实现一个CSS沙箱](https://juejin.cn/post/7153140440777097224#heading-5)
+- [Qiankun实践——实现一个CSS沙箱](https://juejin.cn/post/7153140440777097224)
 
 - [聊聊 QianKun JS 沙箱的那些事](https://www.cnblogs.com/dtux/p/17729670.html)
+
+- [15分钟快速理解qiankun的js沙箱原理及其实现](https://juejin.cn/post/6920110573418086413)
