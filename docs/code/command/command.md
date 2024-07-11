@@ -48,8 +48,8 @@ cn="$GIT_COMMITTER_NAME"
 cm="$GIT_COMMITTER_EMAIL"
 
 
-oldName="ruifeng.kuang"
-oldEmail="ruifeng.kuang@vipshop.com"
+oldName="xxxx"
+oldEmail="xxxx@xxx.com"
 newName="okey573"
 newEmail="854647481@qq.com"
 
