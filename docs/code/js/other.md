@@ -5,7 +5,7 @@ lastUpdated: 2024/07/12 19:40:00 GMT+0800 (中国标准时间)
 
 # 其他一些零碎的代码
 
-## 用二进制实现自由组合的类型
+## 二进制定义类型枚举
 
 ```javascript
 /**
@@ -64,4 +64,70 @@ console.log('unionType3 hasAnyTypes TYPE_5 & TYPE_3 & TYPE_1 ?', hasAnyTypes(uni
 
 // expect: false
 console.log('unionType3 hasAllTypes TYPE_5 & TYPE_3 & TYPE_1 ?', hasAllTypes(unionType3, TYPE_5, TYPE_3, TYPE_1, TYPE_2))
+```
+
+
+## 二进制定义类型枚举 ts + class 版
+
+
+```typescript
+type BasicType = 0b00000 | 0b00001 | 0b00010 | 0b00100 | 0b01000 | 0b10000 | number
+
+
+const NUM_OF_TYPE = 5
+class AwesomeType {
+  static Type_0: BasicType = 0b00000
+  static Type_1: BasicType = 0b00001
+  static Type_2: BasicType = 0b00010
+  static Type_3: BasicType = 0b00100
+  static Type_4: BasicType = 0b01000
+  static Type_5: BasicType = 0b10000
+
+  #value: number
+
+  constructor(value: number) {
+    if (value < 0 || value >= (1 << NUM_OF_TYPE)) {
+      throw new TypeError('数值错误')
+    }
+    this.#value = value
+  }
+
+  static unionTypes = (...types: Array<BasicType>) => {
+    return types.reduce((previous, current) => previous | current, AwesomeType.Type_0)
+  }
+
+  removeTypes(...deletedTypes: Array<BasicType>) {
+    this.#value = deletedTypes.reduce((previous, current) => previous & ~current, this.#value)
+    return this
+  }
+
+  hasType(targetType: BasicType) {
+    return (this.#value & targetType) === targetType
+  }
+
+  hasAnyTypes(...targetTypes: Array<BasicType>) {
+    return targetTypes.some(targetType => this.hasType(targetType))
+  }
+
+  hasAllTypes(...targetTypes: Array<BasicType>) {
+    return targetTypes.every(targetType => this.hasType(targetType))
+  }
+
+
+  get [Symbol.toStringTag]() {
+    return 'AwesomeType'
+  }
+
+  [Symbol.toPrimitive]() {
+    return this.#value
+  }
+
+  valueOf() {
+    return this.#value
+  }
+
+  toString(): string {
+    return '0b' + this.#value.toString(2).padStart(NUM_OF_TYPE, '0')
+  }
+}
 ```
