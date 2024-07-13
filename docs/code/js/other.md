@@ -75,6 +75,7 @@ type BasicType = 0b00000 | 0b00001 | 0b00010 | 0b00100 | 0b01000 | 0b10000 | num
 
 
 const NUM_OF_TYPE = 5
+
 class AwesomeType {
   static Type_0: BasicType = 0b00000
   static Type_1: BasicType = 0b00001
@@ -94,6 +95,16 @@ class AwesomeType {
 
   static unionTypes = (...types: Array<BasicType>) => {
     return types.reduce((previous, current) => previous | current, AwesomeType.Type_0)
+  }
+
+  addType(targetType: BasicType) {
+    this.#value = this.#value | targetType
+    return this
+  }
+
+  addTypes(...targetTypes: Array<BasicType>) {
+    this.#value = targetTypes.reduce((previous, current) => previous | current, this.#value)
+    return this
   }
 
   removeTypes(...deletedTypes: Array<BasicType>) {
