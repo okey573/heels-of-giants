@@ -71,13 +71,12 @@ console.log('unionType3 hasAllTypes TYPE_5 & TYPE_3 & TYPE_1 ?', hasAllTypes(uni
 
 
 ```typescript
-type BasicType = 0b00000 | 0b00001 | 0b00010 | 0b00100 | 0b01000 | 0b10000 | number
+type BasicType =  0b00001 | 0b00010 | 0b00100 | 0b01000 | 0b10000 | number
 
 
 const NUM_OF_TYPE = 5
 
 class AwesomeType {
-  static Type_0: BasicType = 0b00000
   static Type_1: BasicType = 0b00001
   static Type_2: BasicType = 0b00010
   static Type_3: BasicType = 0b00100
@@ -94,7 +93,7 @@ class AwesomeType {
   }
 
   static unionTypes = (...types: Array<BasicType>) => {
-    return types.reduce((previous, current) => previous | current, AwesomeType.Type_0)
+    return types.reduce((previous, current) => previous | current, 0)
   }
 
   addType(targetType: BasicType) {
