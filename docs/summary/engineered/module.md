@@ -1,5 +1,6 @@
 ---
 title: 模块化
+lastUpdated: 2024/07/16 15:20:00 GMT+0800 (中国标准时间)
 ---
 
 # 模块化
@@ -47,7 +48,7 @@ ES Module
 
 ## CommonJS 和 ESM 的区别
 
-- CommonJS 模块输出的是一个值的拷贝，ESM 模块输出的是值的引用
+- CommonJS 模块输出的是一个值的拷贝（对于基本类型是拷贝，对象类型还是只传递了引用），ESM 模块输出的是值的引用
 - CommonJS 模块是运行时加载，ESM 模块是编译时输出接口
 - CommonJS 模块的 require() 是同步加载模块，ESM 模块的 import 命令是异步加载，有一个独立的模块依赖的解析阶段
 - ESM 更好的支持 tree-shaking ，因为可以静态分析。就是 CommonJS 的 require 中可以写变量，无法做到静态分析
