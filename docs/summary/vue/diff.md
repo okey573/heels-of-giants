@@ -1,6 +1,7 @@
 ---
 title: diff 算法
 outline: [2,6]
+lastUpdated: 2024/07/18 18:46:00 GMT+0800 (中国标准时间)
 ---
 
 # vue 的 diff算法
@@ -133,5 +134,7 @@ vue2 的算法复杂度是 o(n) vue3 的 复杂度是 o(n*Logn) 出发点是减�
 减少 dom 的移动, js 消耗换浏览器渲染性能 是值得的
 
 ## 参考链接
+
+- [15张图，20分钟吃透Diff算法核心原理，我说的！！！](https://juejin.cn/post/6994959998283907102)
 
 - [Vue 3 Virtual Dom Diff源码阅读](https://segmentfault.com/a/1190000038654183?utm_source=sf-backlinks)
