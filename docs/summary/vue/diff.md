@@ -138,3 +138,5 @@ vue2 的算法复杂度是 o(n) vue3 的 复杂度是 o(n*Logn) 出发点是减�
 - [15张图，20分钟吃透Diff算法核心原理，我说的！！！](https://juejin.cn/post/6994959998283907102)
 
 - [Vue 3 Virtual Dom Diff源码阅读](https://segmentfault.com/a/1190000038654183?utm_source=sf-backlinks)
+
+- [「React深入」一文吃透虚拟DOM和diff算法](https://juejin.cn/post/7116326409961734152)
