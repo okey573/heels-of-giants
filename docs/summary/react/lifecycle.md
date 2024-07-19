@@ -58,9 +58,9 @@ lastUpdated: Wed May 08 2024 10:27:38 GMT+0800 (中国标准时间)
 
 - componentWillUnmount
 
-### 卸载阶段
+### 错误处理
 
-- componentWillUnmount
+- getDerivedStateFromError
 - componentDidCatch
 
 ## 新旧对比
