@@ -620,12 +620,12 @@ function hasCircularReference (object) {
   // 平级检测完成之后，将当前对象删除，防止误判
   /*
     例如：对象的属性指向同一引用，如果不删除的话，会被认为是循环引用
-    let tempObj = {
-      name: '前端胖头鱼'
+    let o = {
+      name: '1'
     }
-    let obj4 = {
-      obj1: tempObj,
-      obj2: tempObj
+    let obj = {
+      key1: o,
+      key2: o
     }
   */
   check(object)
