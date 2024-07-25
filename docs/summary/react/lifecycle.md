@@ -1,6 +1,6 @@
 ---
 title: 生命周期
-lastUpdated: Wed May 08 2024 10:27:38 GMT+0800 (中国标准时间)
+lastUpdated: 2024/07/25 19:40:00 GMT+0800 (中国标准时间)
 ---
 
 # 生命周期
@@ -70,14 +70,14 @@ lastUpdated: Wed May 08 2024 10:27:38 GMT+0800 (中国标准时间)
 ```diff [挂载]
 constructor
 componentWillMount // [!code --]
-getDevicdeStatFromProp // [!code ++]
+getDerivedStateFromProps // [!code ++]
 render
 componentDidMount
 ```
 
 ```diff [更新]
 componentWillReceiveProps // [!code --]
-getDevicdeStatFromProp // [!code ++]
+getDerivedStateFromProps // [!code ++]
 shouldComponentUpdate
 componentWillUpdate // [!code --]
 render
