@@ -646,3 +646,58 @@ function hasCircularReference (object) {
 
 :::
 
+
+
+#### 闭包
+
+:::  details 题目
+
+```javascript
+// 预测输出
+const createCounter = () => {
+  let count = 0
+  return {
+    count,
+    add () {
+      count++
+    },
+    reset () {
+      count = 0
+    }
+  }
+}
+
+const counterA = createCounter()
+const counterB = createCounter()
+
+counterA.add()
+counterA.add()
+counterB.reset()
+counterB.add()
+counterB.add()
+counterB.add()
+
+console.log(`counterA count ${counterA.count}`)
+console.log(`counterB count ${counterB.count}`)
+```
+
+:::
+
+::: details 答案
+counterA count 0 <br>
+counterB count 0
+:::
+
+:::  details 题目2
+
+如何能使得输出为 <br>
+counterA count 2 <br>
+counterB count 3
+
+:::
+
+::: details 答案2
+1. add 和 reset 改成 `this.counter`
+2. 修改对 count 的定义和初始化
+3. 使用 Proxy 代理最终的对象。在 `get` 函数里判断如果 `key` 是 `count` 则 `return count`
+:::
